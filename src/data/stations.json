@@ -1,0 +1,28 @@
+[
+  {
+    "id": 2215,
+    "locationId": "javkhaa' home",
+    "name": "13 horoolol, Mongolia ulaanbaatar",
+    "status": "OPEN",
+    "address": {
+      "street": "naturiin zam",
+      "city": "Ulaanbaatar",
+      "state": "48",
+      "zip": null,
+      "countryId": 137,
+      "country": "Mongolia",
+      "regionId": 102,
+      "region": "Asia Pacific"
+    },
+    "gps": { "latitude": 47.911714, "longitude": 106.934054 },
+    "dateOpened": "2019-12-20",
+    "stallCount": 6,
+    "counted": true,
+    "elevationMeters": 42,
+    "powerKilowatt": 120,
+    "solarCanopy": false,
+    "battery": false,
+    "statusDays": 0,
+    "urlDiscuss": false
+  }
+]

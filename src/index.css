@@ -1,0 +1,563 @@
+.f20 {
+  font-size: 20px;
+}
+* #see-all{
+  text-decoration: none;
+}
+.see-all #see-all {
+  color: white;
+  display: none;
+}
+.f14 {
+  font-size: 14px;
+}
+.bg-o {
+  background-color: #f17228;
+}
+.color-o {
+  color: #f17228 !important;
+}
+.text h2 {
+  font-size: 14px;
+}
+.carousel-slide {
+  width: 450px;
+  height: 250px;
+  object-fit: cover;
+}
+.info-row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 100px;
+}
+
+.info-col {
+  display: block;
+  padding: 10px 0;
+}
+.info-col img {
+  width: 40px;
+  height: 40px;
+}
+.info-col .text h2 {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 21px;
+  margin: 0;
+}
+.info-col .text p {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+}
+.info-panel {
+  box-shadow: none;
+}
+.sale-meals h4 {
+  font-size: 14px;
+}
+
+.sale-meals .sale-meals::after {
+  margin: 2px 10px;
+}
+
+.carousel-slide {
+  width: 100%;
+}
+.carousel-main {
+  height: 100%;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.containera {
+  width: 90%;
+
+  margin: 0 auto;
+}
+
+.container-forgot {
+  width: 86%;
+
+  margin: 0 auto;
+}
+/* .info-panel{  
+
+  margin-top: 50px;
+  border-radius: 20px;
+
+
+  height: 152px;
+  display: flex; 
+
+   justify-content: flex-start;
+    align-items: center;
+
+
+} */
+.carousel-absolute img {
+  margin-top: 45px;
+  margin-left: -20px;
+  width: 230px;
+}
+.carousel-absolute {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.carousel-text .header-text {
+  font-size: 20px;
+  /* color: #F17228; */
+  color: #f17228;
+  width: 180px;
+  display: flex;
+  justify-content: flex-start;
+  font-weight: 700;
+}
+
+.carousel-text {
+  width: 157px;
+
+  margin-top: 80px;
+}
+.carousel-text hr {
+  display: none;
+}
+.carousel-text .header-p {
+  color: #4d2000;
+  font-size: 12px;
+  justify-content: flex-end;
+}
+.section-header {
+  border-left: 12px solid #f17228;
+  margin-top: 20px;
+  display: flex;
+  margin: 20px 0;
+  font-size: 14px;
+}
+
+/* FORGET PASSWORD */
+
+.forgot-password .login_title {
+  margin-top: 20px;
+  border-left: 5px solid #f17228;
+  padding-left: 10px;
+  text-transform: uppercase;
+  font-size: 14px;
+  margin-left: 20px;
+  margin-top: 30px;
+}
+
+.forgot-password .fp-label1 {
+  display: block;
+  margin-left: 20px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.login_input {
+  /* border: 1px solid black; */
+  /* border-radius: git s20px; */
+
+  border-radius: 10px;
+  border: 1px solid #f17228;
+  background-color: white;
+  width: 100%;
+  height: 40px;
+  padding-left: 20px;
+  font-size: 14px;
+}
+::placeholder {
+  margin-left: 0;
+}
+.email-form {
+  border-radius: 10px;
+  border: 1px solid #fbc5a6;
+  font-size: 14px;
+  margin-left: 20px;
+  width: 305px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  padding: 5px 20px;
+}
+.email-span {
+  color: orange;
+  display: inline;
+}
+.forgotPassword-btn {
+  background-color: #f17228;
+  width: 100%;
+  border-radius: 10px;
+  color: white;
+  font-weight: 400;
+  font-size: 14px;
+  padding: 5px 0;
+  margin-top: 300px;
+}
+.fp-footer {
+  display: none;
+}
+.container-forgot-section{
+  position: relative;
+}
+.container-forgot-section .toast {
+  width: 340px;
+  max-width: 100%;
+  font-size: 0.875rem;
+  pointer-events: auto;
+  background-color: rgba(255, 255, 255, 0.85);
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow:  0px 0px 5px 5px #f1925b28;
+  border-radius: 10px;
+  padding: 13px 10px;
+  border: none;
+  position: absolute;
+  top: -20px;
+  left: 5%;
+  display: block;
+  margin: 0 auto;
+  padding: 50px;
+}
+.toast-img{
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  margin-bottom: 20px;
+
+}
+.fp-text{
+  display: flex;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 500;
+}
+/* TABLET aaaaaaaaaaaaasassafasdfsbfhjefhjwaegfwgwgyurgwuygwuy*/
+@media only screen and (min-width: 768px) {
+  .container-forgot-section .toast {
+    width: 340px;
+    max-width: 100%;
+    font-size: 0.875rem;
+    pointer-events: auto;
+    background-color: rgba(255, 255, 255, 0.85);
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow:  0px 0px 5px 5px #f1925b28;
+    border-radius: 10px;
+    padding: 13px 10px;
+    border: none;
+    position: absolute;
+    top: -20px;
+    left: 28%;
+    display: block;
+    margin: 0 auto;
+    padding: 50px;
+  }
+  .fp-footer {
+    display: none;
+  }
+  .container-forgot {
+    width: 47%;
+
+    margin: 0 auto;
+  }
+  .forgotPassword-btn {
+    background-color: #f17228;
+    width: 100%;
+    border-radius: 20px;
+    color: white;
+    font-weight: 400;
+    font-size: 16px;
+    padding: 5px 0;
+    margin-top: 350px;
+  }
+  .container-forgot .login_input {
+    /* border: 1px solid black; */
+    /* border-radius: git s20px; */
+
+    border-radius: 10px;
+    border: 1px solid #f17228;
+    background-color: white;
+    width: 100%;
+    height: 40px;
+    padding-left: 20px;
+    font-size: 14px;
+  }
+  .login_input::placeholder {
+    margin-left: 17px;
+    margin-top: 6px;
+  }
+
+  .see-all #see-all {
+    display: inline;
+  }
+  .see-all svg {
+    color: white;
+  }
+  .info-panel {
+    margin: 50px auto;
+    border-radius: 20px;
+
+    padding-top: 10px;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  }
+
+  .info-col {
+    flex: none;
+  }
+
+  .carousel-text {
+    margin-top: 40px;
+  }
+
+  .carousel-text .header-text {
+    font-size: 40px;
+    width: 340px;
+  }
+  .carousel-text .header-p {
+    font-size: 18px;
+    width: 250px;
+  }
+  .sale-meals h4 {
+    font-size: 16px;
+  }
+  .slider {
+    box-shadow: 0px 0px 30px 30px #f1722813;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .fp-footer {
+    display: flex;
+  }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+      "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+      "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+      monospace;
+  }
+  .containera {
+    width: 65%;
+
+    margin: 0 auto;
+  }
+
+  /* FONTS */
+
+  .info-panel {
+    margin: 50px auto;
+    margin-top: 50px;
+    border-radius: 20px;
+    padding: 20px;
+
+    height: 152px;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  }
+  .info-col {
+    width: 286px;
+    height: 64px;
+  }
+  .info-col .text h2 {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    margin: 0;
+  }
+  .info-col .text p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+  }
+  .info-col h2 {
+    font-size: 18px;
+    color: #1d1d1f;
+  }
+  .info-col p {
+    font-size: 14px;
+  }
+  .info-col img {
+    width: 60px;
+    height: 60px;
+  }
+  .carousel-indicators [data-bs-target] {
+    background-color: #f17228 !important;
+  }
+  .slider {
+    box-shadow: 0px 0px 30px 30px #f1722813;
+  }
+
+  .carousel-slide {
+    width: 100%;
+  }
+  .carousel-main {
+    z-index: 1;
+    overflow: hidden;
+  }
+
+  .sale-meals .section-header {
+    border-left: 12px solid #f17228;
+    margin-top: 20px;
+    display: flex;
+  }
+  .sale-meals .sale {
+    font-weight: 700;
+  }
+
+  .sale-meals .see-all {
+    color: white;
+    background-color: #f17228;
+    border-radius: 20px;
+    padding: 10px 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
+
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .card-hover {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(128, 128, 128, 0.534);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 18px;
+    color: white;
+    font-size: 16px;
+  }
+
+  .forgotPassword-btn {
+    background-color: #f17228;
+    width: 100%;
+    border-radius: 20px;
+    color: white;
+    font-weight: 400;
+    font-size: 16px;
+    padding: 5px 0;
+    margin-top: 50px;
+    margin-bottom: 220px;
+  }
+  .email-form {
+    margin: 0 auto;
+    border-radius: 10px;
+    border: 1px solid #fbc5a6;
+    font-size: 14px;
+    margin-left: 20px;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding: 5px 60px;
+  }
+  .forgot-password {
+    width: 359px;
+    margin: 0 auto;
+  }
+  .food-card:hover .card-hover {
+    display: flex;
+  }
+  .card {
+    border: none !important;
+    /* box-shadow: 0px 0px 8px rgba(128, 128, 128, 0.158); */
+  }
+  .card:hover {
+    background-color: rgba(80, 80, 80, 0.089);
+  }
+
+  .carousel-item {
+    position: relative;
+  }
+
+  .carousel-absolute {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .carousel-absolute img {
+    width: 40vw;
+  }
+  .info-row {
+    margin-left: 30px;
+  }
+
+  .carousel-text .header-text {
+    font-size: 55px;
+    /* color: #F17228; */
+    width: 400px;
+    display: flex;
+    justify-content: flex-end;
+    font-weight: 700;
+
+    color: #f17228;
+    /* text-shadow: 2px 2px 20px rgba(117, 114, 114, 0.705); */
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+  }
+  .carousel-text {
+    width: 400px;
+    margin-top: 10vh;
+  }
+  .carousel-text hr {
+    color: #f17228;
+    height: 2px !important;
+    opacity: 0.5;
+    border-radius: 20px;
+  }
+  .carousel-text .header-p {
+    color: #4d2000;
+    font-size: 22px;
+    justify-content: flex-end;
+  }
+  .carousel-slide {
+    width: 100vw;
+    height: 600px;
+  }
+  .container-forgot-section .toast {
+    width: 350px;
+    max-width: 100%;
+    font-size: 0.875rem;
+    pointer-events: auto;
+    background-color: rgba(255, 255, 255, 0.85);
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow:  0px 0px 5px 5px #f1925b28;
+    border-radius: 10px;
+    padding: 13px 10px;
+    display: flex;
+    justify-content: center;
+    border: none;
+    position: absolute;
+    top: 20px;
+    left: 38%;
+  }
+  .toast-img{
+    display: none;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .carousel-absolute img {
+    width: 500px;
+  }
+}

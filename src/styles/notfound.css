@@ -1,0 +1,9 @@
+.icon-sz {
+  max-width: 70px;
+  padding-bottom: 50px;
+}
+.box-size {
+  min-height: 40vh;
+  /* max-height: 70vh; */
+  margin-top: 200px;
+}
