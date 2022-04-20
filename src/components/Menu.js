@@ -11,7 +11,6 @@ export default function Menu() {
         fetch("https://dev-api.mstars.mn/api/foods").then(data => data.json()).then(
             (data) => {
                 setData(data.data);
-                console.log(data.data);
                 setFilteredFood(data.data.filter(data => data.category === 'Үндсэн хоол'))
             }
         )
@@ -21,7 +20,6 @@ export default function Menu() {
 
         for (let i = 0; i < btns.length; i++) {
             btns[i].classList.remove('menu-filter-btn-active')
-            console.log(btns[i])
         }
         // e.target.classList.remove('menu-filter-btn-active')
         setFilteredFood(e.target.value === "Хямдралтай" ? data.filter(data => data.discount > 0) : data.filter(data => data.category === e.target.value))

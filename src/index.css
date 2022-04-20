@@ -1,7 +1,7 @@
 .f20 {
   font-size: 20px;
 }
-* #see-all{
+* #see-all {
   text-decoration: none;
 }
 .see-all #see-all {
@@ -42,14 +42,15 @@
 }
 .info-col .text h2 {
   font-weight: 700;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 21px;
   margin: 0;
 }
 .info-col .text p {
-  font-weight: 400;
-  font-size: 12px;
+  font-weight: 300;
+  font-size: 10px;
   line-height: 18px;
+  color: #5d5d5d;
 }
 .info-panel {
   box-shadow: none;
@@ -201,7 +202,7 @@
 .fp-footer {
   display: none;
 }
-.container-forgot-section{
+.container-forgot-section {
   position: relative;
 }
 .container-forgot-section .toast {
@@ -212,7 +213,7 @@
   background-color: rgba(255, 255, 255, 0.85);
   background-clip: padding-box;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  box-shadow:  0px 0px 5px 5px #f1925b28;
+  box-shadow: 0px 0px 5px 5px #f1925b28;
   border-radius: 10px;
   padding: 13px 10px;
   border: none;
@@ -223,14 +224,13 @@
   margin: 0 auto;
   padding: 50px;
 }
-.toast-img{
+.toast-img {
   display: flex;
   justify-content: center;
   margin: 0 auto;
   margin-bottom: 20px;
-
 }
-.fp-text{
+.fp-text {
   display: flex;
   justify-content: center;
   font-size: 14px;
@@ -246,7 +246,7 @@
     background-color: rgba(255, 255, 255, 0.85);
     background-clip: padding-box;
     border: 1px solid rgba(0, 0, 0, 0.1);
-    box-shadow:  0px 0px 5px 5px #f1925b28;
+    box-shadow: 0px 0px 5px 5px #f1925b28;
     border-radius: 10px;
     padding: 13px 10px;
     border: none;
@@ -542,7 +542,7 @@
     background-color: rgba(255, 255, 255, 0.85);
     background-clip: padding-box;
     border: 1px solid rgba(0, 0, 0, 0.1);
-    box-shadow:  0px 0px 5px 5px #f1925b28;
+    box-shadow: 0px 0px 5px 5px #f1925b28;
     border-radius: 10px;
     padding: 13px 10px;
     display: flex;
@@ -552,7 +552,7 @@
     top: 20px;
     left: 38%;
   }
-  .toast-img{
+  .toast-img {
     display: none;
   }
 }

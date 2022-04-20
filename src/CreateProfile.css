@@ -43,7 +43,9 @@
   font-size: 14px;
   padding-left: 20px;
 }
-
+.ProfileContainer-div form input:focus {
+  outline: none;
+}
 .ProfileContainer-div form input::placeholder {
   color: #b5b5b5;
 }

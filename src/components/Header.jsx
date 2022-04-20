@@ -1,5 +1,8 @@
 import React, { useEffect, useState, } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Nav } from 'react-bootstrap';
+import { useNavigate, NavLink } from 'react-router-dom';
+
+
 
 function Header(props) {
 
@@ -48,6 +51,20 @@ function Header(props) {
         localStorage.setItem("userValue", JSON.stringify(userValue))
     }, [userValue])
 
+    const navToProfile = () => {
+        navigate({
+            pathname: "/login"
+        })
+    }
+    const navToMain = () => {
+        navigate({
+            pathname: "/"
+        })
+    }
+    const dropDownDisappear = () => {
+        setToggling(!Toggling)
+    }
+
 
     return (
 
@@ -61,8 +78,7 @@ function Header(props) {
                                 <div className='drop-icon'>
                                     <img className='drop-icon-img' src="mobile-version-icons/spoon_fork.svg" alt="" />
                                 </div>
-                                <a href="">Хоолны цэс</a>
-                                <div className='line'></div>
+                                <NavLink onClick={dropDownDisappear} to="/menu">Хоолны цэс</NavLink>                      <div className='line'></div>
                             </div>
                             <img src="mobile-version-icons/see more.svg" alt="" />
                         </div>
@@ -71,7 +87,7 @@ function Header(props) {
                                 <div className='drop-icon'>
                                     <img className='drop-icon-img' src="mobile-version-icons/spoon_fork.svg" alt="" />
                                 </div>
-                                <a href="">Хүргэлтийн бүс</a>
+                                <NavLink onClick={dropDownDisappear} to="/delivery">Хүргэлтийн бүс</NavLink>
                             </div>
                             <img src="mobile-version-icons/see more.svg" alt="" />
                         </div>
@@ -137,15 +153,15 @@ function Header(props) {
 
                             </button>
                         </div>
-                        <div className='brand'>
+                        <div onClick={navToMain} className='brand'>
                             <img className='nav_image' src="Logo.svg" alt="???" />
                             <span>Food Delivery</span>
                         </div>
 
                         <div className='main-anchor-tags'>
-                            <a id='main-links-href-id' className='main-links-href ' href="">НҮҮР</a>
-                            <a id='main-links-href-id' className='main-links-href ' href="">ХООЛНЫ ЦЭС</a>
-                            <a id='main-links-href-id' className='main-links-href ' href="">ХҮРГЭЛТИЙН БҮС</a>
+                            <NavLink id='main-links-href-id' className='main-links-href ' to="/">НҮҮР</NavLink>
+                            <NavLink id='main-links-href-id' className='main-links-href ' to="/menu">ХООЛНЫ ЦЭС</NavLink>
+                            <NavLink id='main-links-href-id' className='main-links-href ' to="/delivery">ХҮРГЭЛТИЙН БҮС</NavLink>
                         </div>
 
 
@@ -175,7 +191,7 @@ function Header(props) {
                                 <span className='bucket'>Сагс</span>
 
                             </button>
-                            <button>
+                            <button onClick={navToProfile}>
                                 <svg className='sign_in_icon' width="20" height="20" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M9.43359 9.0625C8.64062 9.0625 8.28516 9.5 7 9.5C5.6875 9.5 5.33203 9.0625 4.53906 9.0625C2.51562 9.0625 0.875 10.7305 0.875 12.7539V13.4375C0.875 14.1758 1.44922 14.75 2.1875 14.75H11.8125C12.5234 14.75 13.125 14.1758 13.125 13.4375V12.7539C13.125 10.7305 11.457 9.0625 9.43359 9.0625ZM11.8125 13.4375H2.1875V12.7539C2.1875 11.4414 3.22656 10.375 4.53906 10.375C4.94922 10.375 5.57812 10.8125 7 10.8125C8.39453 10.8125 9.02344 10.375 9.43359 10.375C10.7461 10.375 11.8125 11.4414 11.8125 12.7539V13.4375ZM7 8.625C9.16016 8.625 10.9375 6.875 10.9375 4.6875C10.9375 2.52734 9.16016 0.75 7 0.75C4.8125 0.75 3.0625 2.52734 3.0625 4.6875C3.0625 6.875 4.8125 8.625 7 8.625ZM7 2.0625C8.42188 2.0625 9.625 3.26562 9.625 4.6875C9.625 6.13672 8.42188 7.3125 7 7.3125C5.55078 7.3125 4.375 6.13672 4.375 4.6875C4.375 3.26562 5.55078 2.0625 7 2.0625Z" fill="#F17228" />
                                 </svg>

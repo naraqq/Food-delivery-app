@@ -99,7 +99,7 @@ export default function DeliveryZone() {
           </section>
         </div>
       </div>
-      <div className="mt-4">
+      <div className="mt-4 map-index">
         <MapContainer
           center={[47.917564, 106.917846]}
           zoom={15}

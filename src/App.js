@@ -24,7 +24,7 @@ function App() {
           <Route path="/menu" element={<Menu />}></Route>
           <Route path="/*" element={<NotFound />}></Route>
           <Route path="/register" element={<RegisterForm />}></Route>
-          <Route path="/profile" element={<CreateProfile />}></Route>
+          <Route path="/login" element={<CreateProfile />}></Route>
           <Route path="/forgotpassword" element={<ForgotPassword />}></Route>
           <Route path="/delivery" element={<DeliveryZone />}></Route>
           <Route path="/search/*" element={<SearchForm searchVal={searchParam} />}></Route>
