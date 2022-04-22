@@ -11,6 +11,7 @@ import ForgotPassword from "./components/ForgotPassword";
 import DeliveryZone from "./components/DeliveryZone";
 import Menu from "./components/Menu"
 import SearchForm from "./components/contents/SearchForm";
+import UserProfile from "./components/contents/UserProfile";
 
 function App() {
   const [searchParam, setSearchParam] = useState("");
@@ -27,7 +28,9 @@ function App() {
           <Route path="/login" element={<CreateProfile />}></Route>
           <Route path="/forgotpassword" element={<ForgotPassword />}></Route>
           <Route path="/delivery" element={<DeliveryZone />}></Route>
+          <Route path="/userprofile" element={<UserProfile />}></Route>
           <Route path="/search/*" element={<SearchForm searchVal={searchParam} />}></Route>
+
         </Routes>
       </BrowserRouter>
       <Footer />

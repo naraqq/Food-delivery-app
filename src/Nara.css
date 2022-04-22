@@ -15,6 +15,87 @@ nav {
   z-index: 1000000;
 }
 
+.userprofile-container {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 20px;
+}
+.userprofile-container h5 {
+  font-size: 14px;
+  color: #f17228;
+  margin-left: 20px;
+  border-left: 5px solid #f17228;
+  font-weight: 600;
+  padding-left: 5px;
+  margin-top: 10px;
+  margin-bottom: 25px;
+}
+.userinfo-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px;
+  margin-top: 10px;
+  position: relative;
+  width: 100%;
+  height: 50px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgb(240, 240, 240);
+}
+.userinfo-container input {
+  width: 100%;
+  border: none;
+  font-size: 12px;
+  padding-left: 10px;
+  font-weight: 300;
+  background: none;
+}
+.userinfo-container input:focus {
+  outline: none;
+}
+.userinfo-container input::placeholder {
+  font-size: 13px;
+  color: #b5b5b5;
+  font-weight: 300;
+  padding-left: 3px;
+}
+
+.icon-cont {
+  background-color: #f17228;
+  width: 40px;
+  height: 30px;
+  background-color: #fef5ed;
+  position: relative;
+  border-radius: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.userprofile-icon {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+}
+.userprofile-edit-icon {
+  position: absolute;
+  right: 20px;
+  top: 18px;
+}
+.userprofile-edit-icon:focus {
+  box-sizing: 0 0 5px orange;
+}
+.userprofile-save-button {
+  background-color: green;
+  width: 100%;
+  margin-top: 40px;
+  height: 40px;
+  border-radius: 10px;
+  color: white;
+  background-color: #f17228;
+  font-size: 14px;
+  font-weight: 600;
+}
 /* .mainNav {
     display: none;
   } */
@@ -89,7 +170,7 @@ nav {
   margin-top: 7px;
   color: black;
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 300 !important;
   line-height: 21px;
 }
 .drop-icon {
@@ -98,6 +179,7 @@ nav {
   height: 35px;
   border-radius: 10px;
 }
+
 .drop-icon-img {
   padding: 8px;
 }
@@ -162,6 +244,15 @@ button {
   width: 25px;
   height: 25px;
 }
+#btn-check {
+  position: relative;
+}
+
+.button-check-passwordShow {
+  position: absolute;
+  top: -3px;
+  left: -3px;
+}
 
 .brand span {
   color: #f17228;
@@ -176,6 +267,7 @@ button {
 
 .brand {
   margin-bottom: -15px;
+  cursor: pointer;
 }
 
 .links {
@@ -284,7 +376,7 @@ button {
   top: 0;
   width: 100%;
   height: 100vh;
-  z-index: 2;
+  z-index: 10001000;
   position: fixed;
 }
 

@@ -7,7 +7,6 @@ import { useNavigate, NavLink } from 'react-router-dom';
 function Header(props) {
 
 
-
     const navigate = useNavigate();
 
     const [Toggling, setToggling] = useState(false)
@@ -29,6 +28,9 @@ function Header(props) {
         e.preventDefault();
         setHeaderSearch(!headerSearch)
         setUserValue(e.target.value)
+        if (Toggling === true) {
+            setToggling(!Toggling)
+        }
         e.currentTarget.reset();
     }
     const handleSubmitWeb = (e) => {
@@ -99,7 +101,7 @@ function Header(props) {
                                 <div className='drop-icon'>
                                     <img className='drop-icon-img' src="mobile-version-icons/spoon_fork.svg" alt="" />
                                 </div>
-                                <a href="">Хэрэглэгчийн мэдээлэл</a>
+                                <NavLink onClick={dropDownDisappear} to="/userprofile">Хэрэглэгчийн мэдээлэл</NavLink>
                                 <div className='line'></div>
                             </div>
                             <img src="mobile-version-icons/see more.svg" alt="" />

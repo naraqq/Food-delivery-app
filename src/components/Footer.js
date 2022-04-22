@@ -8,8 +8,8 @@ const Footer = () => {
   // otherServices.getAllFood().then(e=>e.json()).then(e=>console.log("footer = " ,e.data))
   return (
     <>
-      <div className="ftr-top-space d-none d-md-block"></div>
-      <div className="bg-ftr pb-4 ftr-top-space mt-5">
+      <div className=" d-none d-md-block"></div>
+      <div className="bg-ftr pb-4 ">
         <Container>
           <Row className=" pt-4 align-items-stretch">
             <Col className="col-12 col-lg-2  d-flex mb-3 ">

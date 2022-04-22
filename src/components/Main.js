@@ -9,12 +9,14 @@ export default function Main() {
   const [cats, setCats] = useState([]);
   const [foods, setFoods] = useFood();
 
-
   useEffect(() => {
     otherServices
       .getCat()
       .then((res) => res.json())
       .then((res) => setCats(res.data));
+    window.onbeforeunload = function () {
+      window.scrollTo(0, 0);
+    };
   }, []);
 
   function filterFoods(category_name) {
@@ -133,9 +135,7 @@ export default function Main() {
       <div className="containera">
         <Info_panel />
 
-
         {cats.map((cat, index) => filterFoods(cat))}
-
       </div>
     </div>
   );
