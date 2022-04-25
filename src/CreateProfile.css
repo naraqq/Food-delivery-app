@@ -82,14 +82,14 @@
   border-radius: 10px;
   background-color: aquamarine;
 }
-.profileContainer-button:nth-child(3) {
+.profileContainer-button:nth-child(6) {
   margin-top: 25px;
   background-color: #f17228;
   color: white;
   font-weight: 600;
   font-size: 14px;
 }
-.profileContainer-button:nth-child(5) {
+.profileContainer-button:nth-child(4) {
   background-color: white;
   color: #f17228;
   font-weight: 600;

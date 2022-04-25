@@ -1,4 +1,3 @@
-import { isDisabled } from "@testing-library/user-event/dist/utils";
 import React, { useState } from "react";
 
 function UserProfile() {
@@ -7,10 +6,17 @@ function UserProfile() {
   const changeValue = () => {
     setisDisabled(!isDisabled);
   };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    localStorage.setItem("userName", e.target[0].value);
+    localStorage.setItem("userNumber", e.target[1].value);
+  };
+  const [userName, setUsername] = useState();
+  const [userNumber, setUserNumber] = useState();
   return (
     <div className="userprofile-container">
       <h5>ХЭРЭГЛЭГЧ</h5>
-      <form className="userprofile-form" action="">
+      <form className="userprofile-form" action="" onSubmit={handleSubmit}>
         <div className="userinfo-container">
           <div className="icon-cont">
             <svg
@@ -31,6 +37,7 @@ function UserProfile() {
             type="text"
             placeholder="Хэрэглэгчийн нэр"
             disabled={isDisabled}
+            value={userName}
           />
 
           <svg
@@ -69,6 +76,7 @@ function UserProfile() {
             type="text"
             placeholder="Утасны дугаар"
             disabled={isDisabled}
+            value={userNumber}
           />
 
           <svg
@@ -86,8 +94,10 @@ function UserProfile() {
             />
           </svg>
         </div>
+        <button type="submit" className="userprofile-save-button">
+          Хадгалах
+        </button>
       </form>
-      <button className="userprofile-save-button">Хадгалах</button>
     </div>
   );
 }

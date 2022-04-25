@@ -53,7 +53,7 @@ export default function Main() {
               .map((data, index) => (
                 <Card
                   name={data.name}
-                  key={index}
+                  key={data._id}
                   price={data.price}
                   discount={data.discount}
                   img={data.image}
@@ -64,7 +64,7 @@ export default function Main() {
               .map((data, index) => (
                 <Card
                   name={data.name}
-                  key={index}
+                  key={data._id}
                   price={data.price}
                   discount={data.discount}
                   img={data.image}
@@ -104,7 +104,7 @@ export default function Main() {
               .map((data, index) => (
                 <Card
                   name={data.name}
-                  key={index}
+                  key={data._id}
                   price={data.price}
                   discount={data.discount}
                   img={data.image}
@@ -116,7 +116,7 @@ export default function Main() {
               .map((data, index) => (
                 <Card
                   name={data.name}
-                  key={index}
+                  key={data._id}
                   price={data.price}
                   discount={data.discount}
                   img={data.image}
@@ -135,7 +135,7 @@ export default function Main() {
       <div className="containera">
         <Info_panel />
 
-        {cats.map((cat, index) => filterFoods(cat))}
+        {cats.map((cat) => filterFoods(cat))}
       </div>
     </div>
   );

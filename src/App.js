@@ -1,5 +1,5 @@
 import "./Nara.css";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -9,15 +9,15 @@ import NotFound from "./components/contents/sub-contents/NotFound";
 import RegisterForm from "./components/contents/RegisterForm";
 import ForgotPassword from "./components/ForgotPassword";
 import DeliveryZone from "./components/DeliveryZone";
-import Menu from "./components/Menu"
+import Menu from "./components/Menu";
 import SearchForm from "./components/contents/SearchForm";
 import UserProfile from "./components/contents/UserProfile";
 
 function App() {
   const [searchParam, setSearchParam] = useState("");
+
   return (
     <div>
-
       <BrowserRouter>
         <Header searchVal={setSearchParam} />
         <Routes>
@@ -29,8 +29,10 @@ function App() {
           <Route path="/forgotpassword" element={<ForgotPassword />}></Route>
           <Route path="/delivery" element={<DeliveryZone />}></Route>
           <Route path="/userprofile" element={<UserProfile />}></Route>
-          <Route path="/search/*" element={<SearchForm searchVal={searchParam} />}></Route>
-
+          <Route
+            path="/search/*"
+            element={<SearchForm searchVal={searchParam} />}
+          ></Route>
         </Routes>
       </BrowserRouter>
       <Footer />

@@ -36,7 +36,7 @@ export default function Menu() {
             <div>
                 <Row className="g-3">
                     {filteredFood.map(
-                        data => <Card name={data.name} key={data.length} price={data.price} discount={data.discount} img={data.image} />
+                        data => <Card name={data.name} key={data._id} price={data.price} discount={data.discount} img={data.image} />
                     )}
                 </Row>
             </div>

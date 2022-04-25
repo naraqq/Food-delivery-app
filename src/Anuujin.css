@@ -1,182 +1,177 @@
-body{
-    font-family: "Poppins", sans-serif !important;
+.card-container {
+  padding: 10px;
+  border-radius: 7px;
+  border: none;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
 }
-.card-container{
-    padding: 10px;
-    border-radius: 7px;
-    border: none;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    position: relative;
+.card-container:hover .card-container-basket {
+  display: flex;
 }
-.card-container:hover .card-container-basket{
-    display: flex;
+.card-container-basket {
+  border-radius: 7px;
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  width: 100%;
+  margin: -10px;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
 }
-.card-container-basket{
-    border-radius: 7px;
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    background-color: rgba(0, 0, 0, 0.5);
-    height: 100%;
-    width: 100%;
-    margin: -10px;
-    justify-content: center;
-    align-items: center;
-    z-index: 1;
+.card-container-basket p {
+  text-decoration: underline;
+  font-size: 14px;
+  color: white;
 }
-.card-container-basket p{
+.card-container-basket img {
+  height: 30px;
+  width: 40px;
+}
+.card-img-container img {
+  width: 100%;
+  border-radius: 7px;
+  display: flex;
+}
+.card-title {
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 0px !important;
+}
+.card-text {
+  display: inline-flex;
+}
+.card-body {
+  padding: 10px 10px 0px 10px !important;
+}
+.card-text p {
+  margin-bottom: 0px;
+}
+.card-text-price {
+  color: #f17228;
+  font-weight: 600;
+  font-size: 14px;
+}
+.card-text-price-discount {
+  text-decoration: line-through;
+  margin-left: 12px;
+  font-weight: 400;
+  font-size: 14px;
+}
+.card-price-discount-top-right-none {
+  display: none;
+}
+.card-price-discount-top-right {
+  font-weight: 600;
+  font-size: 12px;
+  color: white;
+  right: 0px;
+  top: 0px;
+  padding: 7px 12px;
+  border-radius: 0px 6px 0px 20px;
+  background-color: #f17228;
+  position: absolute;
+}
+.menu-container {
+  width: 90%;
+  margin: auto;
+}
+.menu-filter-btn-container {
+  white-space: nowrap;
+  overflow: auto;
+  padding: 15px 0px;
+}
+.menu-filter-btn {
+  width: 120px;
+  font-size: 12px;
+  font-weight: 700;
+  background-color: white;
+  color: #f17228;
+  padding: 10px;
+  border-radius: 15px;
+  border: solid 0.5px;
+  margin-left: 10px;
+}
+.menu-filter-btn:first-child {
+  margin-left: 0px;
+}
+.menu-filter-btn:focus {
+  background-color: #f17228;
+  color: white;
+}
+.menu-filter-btn-active {
+  background-color: #f17228;
+  color: white;
+}
+
+@media (min-width: 768px) {
+  .card-container {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
+  }
+  .card-container-basket p {
     text-decoration: underline;
     font-size: 14px;
-    color: white;
-}
-.card-container-basket img{
-height: 30px;
-width: 40px;
-
-}
-.card-img-container img{
-    width: 100%;
-    border-radius: 7px;
-    display: flex;
-}
-.card-title{
-    font-size: 12px;
     font-weight: 600;
-    margin-bottom: 0px !important;
-}
-.card-text{
-    display: inline-flex;
-}
-.card-body{
-    padding: 10px 10px 0px 10px !important;
-}
-.card-text p{
-    margin-bottom: 0px;
-}
-.card-text-price{
-    color: #f17228;
-    font-weight: 600;
+  }
+  .card-price-discount-top-right {
     font-size: 14px;
-}
-.card-text-price-discount{
-    text-decoration: line-through;
-    margin-left: 12px;
-    font-weight: 400;
-    font-size: 14px;
-}
-.card-price-discount-top-right-none{
-    display: none;
-}
-.card-price-discount-top-right{
-    font-weight: 600;
-    font-size: 12px;
-    color: white;
-    right: 0px;
-    top:  0px;
-    padding: 7px 12px;
-    border-radius: 0px 6px 0px 20px;
+    padding: 7px 8px;
     background-color: #f17228;
     position: absolute;
-}
-.menu-container{
-    width: 90%;
-    margin: auto;
-}
-.menu-filter-btn-container{
-    white-space: nowrap;
-    overflow: auto;
-    padding: 15px 0px;
-}
-.menu-filter-btn{
-    width: 120px;
-    font-size: 12px;
-    font-weight: 700;
-    background-color: white;
-    color: #f17228;
-    padding: 10px;
-    border-radius: 15px;
-    border: solid 0.5px;
-    margin-left: 10px;
-}
-.menu-filter-btn:first-child{
-    margin-left: 0px;
-}
-.menu-filter-btn:focus{
-    background-color: #f17228;
-    color: white;
-}
-.menu-filter-btn-active{
-    background-color: #f17228;
-    color: white;
+  }
+  .menu-filter-btn-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  .menu-filter-btn {
+    width: 160px;
+    font-size: 14px;
+  }
 }
 
-@media(min-width:768px){
-    .card-container{
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
-    }
-    .card-container-basket p{
-        text-decoration: underline;
-        font-size: 14px;
-        font-weight: 600;
-    }
-    .card-price-discount-top-right{
-        font-size: 14px;
-        padding: 7px 8px;
-        background-color: #f17228;
-        position: absolute;
-    }
-    .menu-filter-btn-container{
-        display: flex;
-        justify-content: space-between;
-    }
-    .menu-filter-btn{
-        width: 160px;
-        font-size: 14px;
-    }
-}
-
-
-@media (min-width:960px){
-    .card-container{
-        padding: 15px;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    }
-    .card-container-basket{
-        margin: -15px;
-    }
-    .card-container-basket p{
-        font-size: 16px;
-        font-weight: 600;
-    }
-    .card-img-container img{
-        width: 100%;
-        border-radius: 7px;
-    }
-    .card-title{
-        font-size: 16px;
-    }
-    .card-text p{
-        margin-bottom: 0px;
-    }
-    .card-text-price{
-        font-size: 18px;
-    }
-    .card-text-price-discount{
-        font-size: 18px;
-    }
-    .card-price-discount-top-right{
-        font-size: 18px;
-        right: 0px;
-        top:  0px;
-        padding: 12px 17px;
-    }
-    .menu-filter-btn-container{
-        display: flex;
-        justify-content: start;
-    }
-    .menu-filter-btn{
-        width: 180px;
-        font-size: 16px;
-        margin-left: 30px;
-    }
+@media (min-width: 960px) {
+  .card-container {
+    padding: 15px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  .card-container-basket {
+    margin: -15px;
+  }
+  .card-container-basket p {
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .card-img-container img {
+    width: 100%;
+    border-radius: 7px;
+  }
+  .card-title {
+    font-size: 16px;
+  }
+  .card-text p {
+    margin-bottom: 0px;
+  }
+  .card-text-price {
+    font-size: 18px;
+  }
+  .card-text-price-discount {
+    font-size: 18px;
+  }
+  .card-price-discount-top-right {
+    font-size: 18px;
+    right: 0px;
+    top: 0px;
+    padding: 12px 17px;
+  }
+  .menu-filter-btn-container {
+    display: flex;
+    justify-content: flex-start;
+  }
+  .menu-filter-btn {
+    width: 180px;
+    font-size: 16px;
+    margin-left: 30px;
+  }
 }
