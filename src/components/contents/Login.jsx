@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { userServices } from "../../services/userService";
 
-function CreateProfile() {
+function Login() {
   const navigate = useNavigate();
 
-  const [imgElement, setImageElement] = useState(false);
+  const [imgElement, setImageElement] = useState(true);
   const [visible, setVisible] = useState(false);
   const imgToggler = () => {
     setImageElement(!imgElement);
@@ -23,19 +24,28 @@ function CreateProfile() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    localStorage.setItem("email", e.target[0].value);
-    localStorage.setItem("password", e.target[1].value);
+
+    userServices
+      .loginUser({
+        email: e.target[0].value,
+        password: e.target[1].value,
+      })
+      .then((res) => res.json())
+      .then((data) => localStorage.setItem("data", data.data.name));
+    if (localStorage.getItem("data")) {
+      navigate({
+        pathname: "/",
+      });
+    }
   };
-  useEffect(() => {
-    // userServices.loginUser().then();
-  }, []);
+
   return (
     <div className="ProfileContainer">
       <div className="ProfileContainer-div">
         <h3>нэвтрэх</h3>
         <form action="" onSubmit={handleSubmit}>
           <h4>И-мэйл</h4>
-          <input type="text" placeholder="И-мэйл хаягаа оруулна уу. " />
+          <input type="email" placeholder="И-мэйл хаягаа оруулна уу. " />
           <h4>Нууц үг</h4>
           <div className="input-div">
             <input
@@ -85,4 +95,4 @@ function CreateProfile() {
   );
 }
 
-export default CreateProfile;
+export default Login;

@@ -19,6 +19,11 @@ export const UserProvider = (props) => {
         id: data.id,
         address: data.address,
       });
+    } else if (localStorage.getItem("data")) {
+      const data = JSON.parse(localStorage.getItem("data"));
+      setSignUp({
+        userName: data.data,
+      });
     }
   });
   return (

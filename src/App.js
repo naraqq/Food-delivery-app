@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Main from "./components/Main";
-import CreateProfile from "./components/contents/CreateProfile";
+import Login from "./components/contents/Login";
 import NotFound from "./components/contents/sub-contents/NotFound";
 import RegisterForm from "./components/contents/RegisterForm";
 import ForgotPassword from "./components/ForgotPassword";
@@ -25,7 +25,7 @@ function App() {
           <Route path="/menu" element={<Menu />}></Route>
           <Route path="/*" element={<NotFound />}></Route>
           <Route path="/register" element={<RegisterForm />}></Route>
-          <Route path="/login" element={<CreateProfile />}></Route>
+          <Route path="/login" element={<Login />}></Route>
           <Route path="/forgotpassword" element={<ForgotPassword />}></Route>
           <Route path="/delivery" element={<DeliveryZone />}></Route>
           <Route path="/userprofile" element={<UserProfile />}></Route>

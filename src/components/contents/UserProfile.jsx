@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 function UserProfile() {
   const [isDisabled, setisDisabled] = useState(true);
@@ -6,13 +6,16 @@ function UserProfile() {
   const changeValue = () => {
     setisDisabled(!isDisabled);
   };
+  const userName = localStorage.getItem("userName");
+  const userNumber = localStorage.getItem("userNumber");
+
   const handleSubmit = (e) => {
     e.preventDefault();
     localStorage.setItem("userName", e.target[0].value);
     localStorage.setItem("userNumber", e.target[1].value);
+    setisDisabled(!isDisabled);
   };
-  const [userName, setUsername] = useState();
-  const [userNumber, setUserNumber] = useState();
+  useEffect(() => {});
   return (
     <div className="userprofile-container">
       <h5>ХЭРЭГЛЭГЧ</h5>
@@ -36,8 +39,9 @@ function UserProfile() {
           <input
             type="text"
             placeholder="Хэрэглэгчийн нэр"
+            defaultValue={userName}
             disabled={isDisabled}
-            value={userName}
+            autoFocus
           />
 
           <svg
@@ -75,8 +79,8 @@ function UserProfile() {
           <input
             type="text"
             placeholder="Утасны дугаар"
-            disabled={isDisabled}
-            value={userNumber}
+            // disabled={isDisabled}
+            defaultValue={userNumber}
           />
 
           <svg
