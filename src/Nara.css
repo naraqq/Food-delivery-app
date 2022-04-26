@@ -21,6 +21,33 @@ nav {
   margin: 0;
   padding: 20px;
 }
+.user-profile-container-main {
+  display: flex;
+  justify-content: center;
+}
+.exit_reminder {
+  position: absolute;
+  width: 250px;
+  height: 150px;
+  border-radius: 10px;
+  top: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 0 5px silver;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+.exit_reminder_icon {
+  padding-top: 15px;
+  display: flex;
+  justify-content: center;
+}
+.exit_reminder_container_dis {
+  display: none;
+}
 .userprofile-container h5 {
   font-size: 14px;
   color: #f17228;
@@ -30,6 +57,50 @@ nav {
   padding-left: 5px;
   margin-top: 10px;
   margin-bottom: 25px;
+}
+.exit-text {
+  padding: 0 20px;
+}
+.exit-text p {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 600;
+  text-align: center;
+}
+.exit_reminder_container {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+}
+.exit-icon-con {
+  background-color: #f17228;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.exit_button_container {
+  height: 35px;
+}
+.exit_button_container button:nth-child(1) {
+  background-color: #fbc5a6;
+  width: 50%;
+  height: 100%;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+}
+.exit_button_container button:nth-child(2) {
+  background-color: #f17228;
+  width: 50%;
+  height: 100%;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
 }
 .userinfo-container {
   display: flex;
@@ -428,6 +499,7 @@ button {
     height: 370px;
     background-color: white;
   }
+
   .spacer-small {
     width: 100%;
     height: 56px;
@@ -533,6 +605,10 @@ button {
 /* LOG IN CSS */
 
 @media only screen and (min-width: 768px) {
+  .userprofile-container {
+    width: 50%;
+    margin-top: 100px;
+  }
   .log-in {
     display: none;
   }
@@ -729,6 +805,13 @@ button {
 @media only screen and (min-width: 1264px) {
   .navContainer {
     width: 80%;
+  }
+  .userprofile-container {
+    width: 30%;
+    margin-top: 100px;
+  }
+  .log-in {
+    display: none;
   }
 }
 @media only screen and (min-width: 1464px) {

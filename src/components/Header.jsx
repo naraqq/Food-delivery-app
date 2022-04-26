@@ -8,6 +8,7 @@ function Header(props) {
   const [Toggling, setToggling] = useState(false);
   const [headerSearch, setHeaderSearch] = useState(false);
   const [toggleToDropdown, setToggleToDropDown] = useState(false);
+  const [exit, setExit] = useState(false);
 
   const toggler = () => setToggling(!Toggling);
   const headSearchBar = () => {
@@ -31,26 +32,27 @@ function Header(props) {
     e.currentTarget.reset();
   };
   const handleSubmitWeb = (e) => {
-    navigate({
-      pathname: "/search",
-      search: e.target[1].value,
-    });
+    if (localStorage.getItem("data") === !null) {
+      navigate({
+        pathname: "/search",
+        search: e.target[1].value,
+      });
+    }
+
     props.searchVal(e.target[1].value);
     e.preventDefault();
     setUserValue(e.target.value);
     e.currentTarget.reset();
   };
   const [userValue, setUserValue] = useState(() => {
-    // getting stored value
     const saved = localStorage.getItem("userValue2");
     const initialValue = JSON.parse(saved);
     return initialValue || "";
   });
-  useEffect(() => {
-    localStorage.setItem("userValue", JSON.stringify(userValue));
-  }, [userValue]);
+
   const clearLocalStorage = () => {
     localStorage.clear();
+    setExit(!exit);
     setToggleToDropDown(!toggleToDropdown);
     navigate({
       pathname: "/",
@@ -74,6 +76,9 @@ function Header(props) {
 
   const toggleDropdown = () => {
     setToggleToDropDown(!toggleToDropdown);
+  };
+  const checkExit = () => {
+    setExit(!exit);
   };
 
   return (
@@ -183,6 +188,7 @@ function Header(props) {
                 onSubmit={searchBarAppear}
                 placeholder="Хайх"
                 type="text"
+                autoFocus
               />
             </form>
           </div>
@@ -360,7 +366,43 @@ function Header(props) {
                   Хэрэглэгчийн мэдээлэл
                 </NavLink>
                 <a href="">Миний захиалгууд</a>
-                <button onClick={clearLocalStorage}>Гарах</button>
+                <button onClick={checkExit}>Гарах</button>
+              </div>
+              <div
+                style={{ backgroundColor: "rgba(0, 0, 0, 0.4)" }}
+                className={
+                  exit
+                    ? "exit_reminder_container"
+                    : "exit_reminder_container_dis"
+                }
+              >
+                <div className="exit_reminder">
+                  <div className="exit_reminder_icon">
+                    <div className="exit-icon-con">
+                      <svg
+                        width="18"
+                        height="18"
+                        viewBox="0 0 18 18"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M9 0.53125C4.18359 0.53125 0.28125 4.46875 0.28125 9.25C0.28125 14.0664 4.18359 17.9688 9 17.9688C13.7812 17.9688 17.7188 14.0664 17.7188 9.25C17.7188 4.46875 13.7812 0.53125 9 0.53125ZM9 16.2812C5.09766 16.2812 1.96875 13.1523 1.96875 9.25C1.96875 5.38281 5.09766 2.21875 9 2.21875C12.8672 2.21875 16.0312 5.38281 16.0312 9.25C16.0312 13.1523 12.8672 16.2812 9 16.2812ZM12.7617 7.31641C12.7617 5.55859 10.8984 4.1875 9.17578 4.1875C7.52344 4.1875 6.46875 4.89062 5.66016 6.12109C5.51953 6.29688 5.55469 6.54297 5.73047 6.68359L6.71484 7.42188C6.89062 7.5625 7.17188 7.52734 7.3125 7.35156C7.83984 6.68359 8.22656 6.29688 9.03516 6.29688C9.66797 6.29688 10.4414 6.68359 10.4414 7.31641C10.4414 7.77344 10.0547 7.98438 9.42188 8.33594C8.71875 8.75781 7.76953 9.25 7.76953 10.5156V10.7969C7.76953 11.043 7.94531 11.2188 8.19141 11.2188H9.77344C10.0195 11.2188 10.1953 11.043 10.1953 10.7969V10.5859C10.1953 9.70703 12.7617 9.67188 12.7617 7.31641ZM10.4766 13.1875C10.4766 12.3789 9.80859 11.7109 9 11.7109C8.15625 11.7109 7.52344 12.3789 7.52344 13.1875C7.52344 14.0312 8.15625 14.6641 9 14.6641C9.80859 14.6641 10.4766 14.0312 10.4766 13.1875Z"
+                          fill="white"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+
+                  <div className="exit-text">
+                    <p>Та системээс гарахдаа итгэлтэй </p>
+                    <p> байна уу ?</p>
+                  </div>
+                  <div className="exit_button_container">
+                    <button onClick={clearLocalStorage}>Тийм</button>
+                    <button onClick={checkExit}>Үгүй</button>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

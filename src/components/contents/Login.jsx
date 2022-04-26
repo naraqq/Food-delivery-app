@@ -36,6 +36,8 @@ function Login() {
       navigate({
         pathname: "/",
       });
+    } else {
+      alert("Хэрэглэгчийн email эсвэл нууц үг буруу байна!");
     }
   };
 
