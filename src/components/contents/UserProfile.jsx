@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import {userServices} from "../../services/userService"
 
 function UserProfile() {
   const [isDisabled, setisDisabled] = useState(true);
@@ -80,8 +81,9 @@ function UserProfile() {
             <input
               type="text"
               placeholder="Утасны дугаар"
-              // disabled={isDisabled}
+              disabled={isDisabled}
               defaultValue={userNumber}
+              autoFocus
             />
 
             <svg
