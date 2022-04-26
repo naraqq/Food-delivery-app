@@ -11,6 +11,7 @@ import "./Nara.css";
 import "./RegisterFormCSS.css";
 import "./CreateProfile.css";
 import FoodProvider from "./contexts/FoodContext";
+import "./styles/order.css"
 
 ReactDOM.render(
   <React.StrictMode>
