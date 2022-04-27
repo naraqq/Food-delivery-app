@@ -4,11 +4,12 @@ import { useNavigate } from "react-router-dom";
 
 export default function Card(props) {
   const navigate = useNavigate();
+  const name = props.name
   const handleCard = () => {
-    navigate({
-      pathname: "/order",
-    });
-    console.log("card click!!!");
+    navigate(
+      "/order",
+      {state:{name}}
+    );
   };
   return (
     <>

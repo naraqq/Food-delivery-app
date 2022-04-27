@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, NavLink } from "react-router-dom";
+import {userServices} from "../../services/userService"
 
 function RegisterForm() {
   const [trigger, setTrigger] = useState(false);
@@ -20,29 +21,33 @@ function RegisterForm() {
     setPasswordIconHide(!passwordIconHide);
     setPasswordHide(!passwordHide);
   };
-  const [name, setName] = useState();
-  const [email, setEmail] = useState();
-  const [address, setAddress] = useState();
-  const [password, setPassword] = useState();
+
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setName(e.target[0].value);
-    console.log(name);
-    setEmail(e.target[1].value);
-    console.log(email);
-    setAddress(e.target[2].value);
-    console.log(address);
-    setPassword(
-      e.target[5].value === e.target[3].value
-        ? e.target[5].value
-        : alert("Нууц дугаар зөрүүтэй байна!")
-    );
-    console.log(password);
-    navigate({
-      pathname: "/login",
-    });
+    if(e.target[3].value === e.target[5].value) {
+      if(trigger) {
+        navigate({
+          pathname: "/login",
+        });
+        userServices
+        .signUpUser({
+          email: e.target[1].value,
+          password: e.target[5].value,
+          name: e.target[0].value,
+          address: e.target[2].value,
+        })
+        .then((res) => res.json())
+        .then((data) => console.log(data));
+      } else {
+        alert("Бүртгүүлхийн тулд үйлчилгээний нөхцлийг зөвшөөрнө үү.")
+      }
+      
+    } else {
+      alert("Нууц үг зөрүүтэй тул бүртгэх боломжгүй байна.")
+    }
+
   };
 
   return (
@@ -61,6 +66,7 @@ function RegisterForm() {
             className="form-input"
             type="email"
             placeholder="И-мэйл хаягаа оруулна уу. "
+
           />
           <span>Хаяг</span>
           <input
@@ -123,9 +129,9 @@ function RegisterForm() {
                 <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
               </svg>
             </button>
-            <a href="www.notfound.com">Үйлчилгээний нөхцөл зөвшөөрөх</a>
+            <NavLink to="/terms">Үйлчилгээний нөхцөл зөвшөөрөх</NavLink>
           </div>
-          <button className="form-main-btn">Бүртгүүлэх</button>
+          <button type="submit" className="form-main-btn">Бүртгүүлэх</button>
         </form>
       </div>
     </div>

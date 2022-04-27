@@ -1,0 +1,94 @@
+.order-container {
+  width: 100%;
+  height: 100vh;
+  background-color: white;
+  position: absolute;
+  z-index: 100100100;
+  top: 0;
+}
+.order-img {
+  width: 100%;
+  height: 40vh;
+  transform: scale(1.1);
+}
+.order-upper-div {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #f17228;
+  width: 80%;
+  margin: auto;
+  margin-top: 30px;
+}
+.order-middle-div {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 80%;
+  margin: auto;
+  margin-top: 10px;
+}
+.order-middle-div span {
+  font-size: 14px;
+  font-weight: 600;
+  color: #f17228;
+  margin-left: 0;
+}
+.order-middle-div p {
+  font-size: 14px;
+  font-weight: 300;
+  margin-top: 10px;
+}
+.order-upper-div h6 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 0;
+  padding-top: 2px;
+}
+.order-upper-div span {
+  color: #f17228;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.count {
+  width: 80%;
+  height: 40px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.count button {
+  background-color: #f17228;
+  width: 55px;
+  height: 40px;
+  border-radius: 10px;
+  font-size: 20px;
+  color: white;
+}
+.order-num {
+  margin-left: 10%;
+  color: #f17228;
+  font-size: 15px;
+  font-weight: 600;
+}
+.count .displayer {
+  background-color: #fff1e9;
+  width: 55%;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.order-button {
+  background-color: #f17228;
+  width: 80%;
+  border-radius: 10px;
+  height: 40px;
+  margin-top: 50px;
+  margin-left: 10%;
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+}

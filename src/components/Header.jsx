@@ -320,7 +320,7 @@ function Header(props) {
                 <span className="bucket">Сагс</span>
               </button>
               {localStorage.getItem("data") ? (
-                <button onClick={toggleDropdown}>
+                <button onClick={toggleDropdown} >
                   <svg
                     className="sign_in_icon"
                     width="20"

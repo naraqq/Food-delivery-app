@@ -13,6 +13,7 @@ import Menu from "./components/Menu";
 import SearchForm from "./components/contents/SearchForm";
 import UserProfile from "./components/contents/UserProfile";
 import Order from "./components/contents/Order";
+import Terms from "./components/contents/sub-contents/TermsAndCondition";
 
 function App() {
   const [searchParam, setSearchParam] = useState("");
@@ -31,10 +32,12 @@ function App() {
           <Route path="/delivery" element={<DeliveryZone />}></Route>
           <Route path="/userprofile" element={<UserProfile />}></Route>
           <Route path="/order" element={<Order />}></Route>
+          <Route path="/terms" element={<Terms />}></Route>
           <Route
             path="/search/*"
             element={<SearchForm searchVal={searchParam} />}
           ></Route>
+
         </Routes>
       </BrowserRouter>
       <Footer />
