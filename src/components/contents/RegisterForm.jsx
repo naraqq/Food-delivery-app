@@ -59,7 +59,7 @@ function RegisterForm() {
           <span>И-мэйл</span>
           <input
             className="form-input"
-            type="text"
+            type="email"
             placeholder="И-мэйл хаягаа оруулна уу. "
           />
           <span>Хаяг</span>
