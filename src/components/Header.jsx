@@ -53,7 +53,6 @@ function Header(props) {
   const clearLocalStorage = () => {
     localStorage.clear();
     setExit(!exit);
-    setToggleToDropDown(!toggleToDropdown);
     navigate({
       pathname: "/",
     });
@@ -150,7 +149,7 @@ function Header(props) {
                     alt=""
                   />
                 </div>
-                <a href="">Миний захиалга</a>
+                <NavLink onClick={dropDownDisappear} to="/basket">Миний захиалга</NavLink>
               </div>
               <img src="mobile-version-icons/see more.svg" alt="" />
             </div>
@@ -360,17 +359,18 @@ function Header(props) {
                 </button>
               )}
               <div
+              onClick={toggleDropdown}
                 className={
                   toggleToDropdown ? "user_dropdown" : "user_dropdown_dis"
                 }
               >
                 <NavLink
-                  onClick={() => setToggleToDropDown(!toggleToDropdown)}
+                  // onClick={() => setToggleToDropDown(!toggleToDropdown)}
                   to="/userprofile"
                 >
                   Хэрэглэгчийн мэдээлэл
                 </NavLink>
-                <NavLink to="/basket">Миний захиалгууд</NavLink>
+                <NavLink onClick={() => setToggleToDropDown(!toggleToDropdown)} to="/basket">Миний захиалгууд</NavLink>
                 <button onClick={checkExit}>Гарах</button>
               </div>
               <div

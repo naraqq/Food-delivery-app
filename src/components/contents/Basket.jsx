@@ -18,28 +18,31 @@ function Basket() {
       .then((data) => data.json())
       .then((data) => setData(data.data));
   }, []);
-  const totalPrice = data.map((e) => e.price);
+  let amount = 0
+  let filteredData = data.filter(e => e.name.includes(orderedItem))
+  const totalPrice = filteredData.map((e) => e.price);
+  for(let i = 0; i < filteredData.length; i++) {
+    amount += parseInt(totalPrice[i])
+  }
+  let total = amount * count
 
-  console.log(typeof totalPrice);
-  console.log(totalPrice);
-  // console.log(count);
-  // console.log(orderedItem);
   return (
     <div className="basket-container">
       <h6>МИНИЙ САГС</h6>
       <div className="meal-container">
-        {data.map((data) => (
+        {filteredData.map((data) => (
           <BasketItem
             name={data.name}
             key={data._id}
             price={data.price}
             discount={data.discount}
             img={data.image}
+            count={count}
           />
         ))}
       </div>
       <div className="lower-container">
-        <p>Нийт: 0₮</p>
+        <p>Нийт: {total}₮</p>
       </div>
       <button>Захиалах</button>
     </div>

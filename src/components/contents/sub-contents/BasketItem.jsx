@@ -1,14 +1,7 @@
-import React, { useEffect, useState } from "react";
-import { otherServices } from "../../../services/otherServices";
+import React, { useState } from "react";
 
 function BasketItem(props) {
-  useEffect(() => {
-    otherServices
-      .getAllFood()
-      .then((data) => data.json())
-      .then((data) => setData(data.data));
-  }, []);
-  const [data, setData] = useState([]);
+  const [count, setCount] = useState(props.count);
   return (
     <div className="order-box">
       <div className="order-img-containers">
@@ -22,9 +15,9 @@ function BasketItem(props) {
         <p>{props.name}</p>
         <span>{props.price}₮</span>
         <div className="controllers">
-          <button className="order-button-min">-</button>
-          <p className="order-span-div-min">1</p>
-          <button className="order-button-min">+</button>
+          <button onClick={()=>{setCount(count - 1)}} className="order-button-min">-</button>
+          <p className="order-span-div-min">{count}</p>
+          <button onClick={()=>{setCount(count + 1)}} className="order-button-min">+</button>
         </div>
       </div>
     </div>

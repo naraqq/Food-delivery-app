@@ -141,7 +141,6 @@ nav {
   top: 25%;
   left: 50%;
   transform: translateX(-50%);
-  box-shadow: 0 0 5px rgb(178, 178, 178);
   background-color: white;
   display: flex;
   flex-direction: column;
@@ -200,7 +199,7 @@ nav {
   width: 50%;
   height: 100%;
   color: white;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 600;
 }
 .exit_button_container button:nth-child(2) {
@@ -208,7 +207,7 @@ nav {
   width: 50%;
   height: 100%;
   color: white;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 600;
 }
 .userinfo-container {
@@ -389,12 +388,16 @@ nav {
   justify-content: space-between;
   position: relative;
 }
+.anchor-single-container:nth-child(1) {
+  padding-bottom: 20px;
+}
+
 .line {
   width: 100%;
   position: absolute;
   height: 1px;
   background-color: #fff4eb;
-  top: 43px;
+  top: 48px;
 }
 .drop-down-menu-dis {
   display: none;
