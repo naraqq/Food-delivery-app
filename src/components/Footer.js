@@ -5,7 +5,6 @@ import { otherServices } from "../services/otherServices";
 import "../styles/javka.css";
 
 const Footer = () => {
-  // otherServices.getAllFood().then(e=>e.json()).then(e=>console.log("footer = " ,e.data))
   return (
     <>
       <div className=" d-none d-md-block"></div>

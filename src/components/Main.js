@@ -47,29 +47,29 @@ export default function Main() {
         <Row className="g-3">
           {window.innerWidth > 425
             ? foods
-              .filter((data) => data.discount > 1)
-              .splice(0, 4)
+                .filter((data) => data.discount > 0)
+                .splice(0, 4)
 
-              .map((data, index) => (
-                <Card
-                  name={data.name}
-                  key={data._id}
-                  price={data.price}
-                  discount={data.discount}
-                  img={data.image}
-                />
-              ))
+                .map((data, index) => (
+                  <Card
+                    name={data.name}
+                    key={data._id}
+                    price={data.price}
+                    discount={data.discount}
+                    img={data.image}
+                  />
+                ))
             : foods
-              .splice(0, 2)
-              .map((data, index) => (
-                <Card
-                  name={data.name}
-                  key={data._id}
-                  price={data.price}
-                  discount={data.discount}
-                  img={data.image}
-                />
-              ))}
+                .splice(0, 2)
+                .map((data, index) => (
+                  <Card
+                    name={data.name}
+                    key={data._id}
+                    price={data.price}
+                    discount={data.discount}
+                    img={data.image}
+                  />
+                ))}
         </Row>
       </div>
     ) : (
@@ -99,29 +99,29 @@ export default function Main() {
         <Row className="g-3">
           {window.innerWidth > 425
             ? foods
-              .filter((data) => data.category == category_name.name)
-              .splice(0, 4)
-              .map((data, index) => (
-                <Card
-                  name={data.name}
-                  key={data._id}
-                  price={data.price}
-                  discount={data.discount}
-                  img={data.image}
-                />
-              ))
+                .filter((data) => data.category == category_name.name)
+                .splice(0, 4)
+                .map((data, index) => (
+                  <Card
+                    name={data.name}
+                    key={data._id}
+                    price={data.price}
+                    discount={data.discount}
+                    img={data.image}
+                  />
+                ))
             : foods
-              .filter((data) => data.category == category_name.name)
-              .splice(0, 2)
-              .map((data, index) => (
-                <Card
-                  name={data.name}
-                  key={data._id}
-                  price={data.price}
-                  discount={data.discount}
-                  img={data.image}
-                />
-              ))}
+                .filter((data) => data.category == category_name.name)
+                .splice(0, 2)
+                .map((data, index) => (
+                  <Card
+                    name={data.name}
+                    key={data._id}
+                    price={data.price}
+                    discount={data.discount}
+                    img={data.image}
+                  />
+                ))}
         </Row>
       </div>
     );

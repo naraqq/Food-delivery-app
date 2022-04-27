@@ -19,6 +19,11 @@ nav {
   height: 100%;
   padding: 25px;
 }
+.order-img-main {
+  width: 100%;
+  height: 100px;
+  transform: scale(1.1);
+}
 .terms-and-condition h5 {
   text-transform: uppercase;
   font-size: 14px;
@@ -45,6 +50,89 @@ nav {
   display: flex;
   justify-content: center;
 }
+.basket-container {
+  width: 100%;
+  height: 100vh;
+  padding: 20px;
+}
+.meal-container {
+  width: 100%;
+  height: 60%;
+  overflow: scroll;
+}
+.order-box {
+  width: 100%;
+  height: 120px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #f3f3f3;
+}
+.order-img-containers {
+  width: 40%;
+  height: 100px;
+  background-color: #fff4eb;
+  overflow: hidden;
+}
+.order-item-containers {
+  width: 55%;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.order-item-containers p {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+.order-item-containers span {
+  margin: 0;
+  color: #f17228;
+  font-weight: 500;
+  font-size: 14px;
+}
+.basket-container button {
+  width: 100%;
+  height: 40px;
+  background-color: #f17228;
+  color: white;
+  border-radius: 10px;
+  font-size: 14px;
+  margin-top: 20px;
+  font-weight: 700;
+}
+.controllers .order-button-min {
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+}
+.order-span-div-min {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  margin: 5px !important;
+  padding: 5px;
+  text-align: center;
+}
+.lower-container {
+  display: flex;
+  justify-content: end;
+}
+.lower-container p {
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.basket-container h6 {
+  color: #f17228;
+  font-size: 13px;
+  font-weight: 600;
+  border-left: 5px solid #f17228;
+  padding-left: 5px;
+}
 .exit_reminder {
   position: absolute;
   width: 250px;
@@ -53,7 +141,7 @@ nav {
   top: 25%;
   left: 50%;
   transform: translateX(-50%);
-  box-shadow: 0 0 5px silver;
+  box-shadow: 0 0 5px rgb(178, 178, 178);
   background-color: white;
   display: flex;
   flex-direction: column;
@@ -103,6 +191,7 @@ nav {
   justify-content: center;
   align-items: center;
 }
+
 .exit_button_container {
   height: 35px;
 }

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate, NavLink } from "react-router-dom";
-import {userServices} from "../../services/userService"
+import { userServices } from "../../services/userService";
 
 function RegisterForm() {
   const [trigger, setTrigger] = useState(false);
@@ -26,28 +26,23 @@ function RegisterForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if(e.target[3].value === e.target[5].value) {
-      if(trigger) {
+    if (e.target[3].value === e.target[5].value) {
+      if (trigger) {
         navigate({
           pathname: "/login",
         });
-        userServices
-        .signUpUser({
+        userServices.signUpUser({
           email: e.target[1].value,
           password: e.target[5].value,
           name: e.target[0].value,
           address: e.target[2].value,
-        })
-        .then((res) => res.json())
-        .then((data) => console.log(data));
+        });
       } else {
-        alert("Бүртгүүлхийн тулд үйлчилгээний нөхцлийг зөвшөөрнө үү.")
+        alert("Бүртгүүлхийн тулд үйлчилгээний нөхцлийг зөвшөөрнө үү.");
       }
-      
     } else {
-      alert("Нууц үг зөрүүтэй тул бүртгэх боломжгүй байна.")
+      alert("Нууц үг зөрүүтэй тул бүртгэх боломжгүй байна.");
     }
-
   };
 
   return (
@@ -66,7 +61,6 @@ function RegisterForm() {
             className="form-input"
             type="email"
             placeholder="И-мэйл хаягаа оруулна уу. "
-
           />
           <span>Хаяг</span>
           <input
@@ -131,7 +125,9 @@ function RegisterForm() {
             </button>
             <NavLink to="/terms">Үйлчилгээний нөхцөл зөвшөөрөх</NavLink>
           </div>
-          <button type="submit" className="form-main-btn">Бүртгүүлэх</button>
+          <button type="submit" className="form-main-btn">
+            Бүртгүүлэх
+          </button>
         </form>
       </div>
     </div>

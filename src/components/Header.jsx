@@ -80,6 +80,11 @@ function Header(props) {
   const checkExit = () => {
     setExit(!exit);
   };
+  const navToBasket = () => {
+    navigate({
+      pathname: "/basket",
+    });
+  };
 
   return (
     <div>
@@ -303,7 +308,7 @@ function Header(props) {
                   />
                 </svg>
               </button>
-              <button className="md-button">
+              <button onClick={navToBasket} className="md-button">
                 <svg
                   className="bucket_icon"
                   width="23"
@@ -320,7 +325,7 @@ function Header(props) {
                 <span className="bucket">Сагс</span>
               </button>
               {localStorage.getItem("data") ? (
-                <button onClick={toggleDropdown} >
+                <button onClick={toggleDropdown}>
                   <svg
                     className="sign_in_icon"
                     width="20"
@@ -365,7 +370,7 @@ function Header(props) {
                 >
                   Хэрэглэгчийн мэдээлэл
                 </NavLink>
-                <a href="">Миний захиалгууд</a>
+                <NavLink to="/basket">Миний захиалгууд</NavLink>
                 <button onClick={checkExit}>Гарах</button>
               </div>
               <div
