@@ -19,15 +19,15 @@ export default function Info_panel() {
         <Col sm={12} md={4} lg={4} className="info-col d-flex">
           <img src={healthy} alt="" />
           <div className="text ms-3">
-            <h2>Шуурхай хүргэлт</h2>
-            <p>30 минутанд таны гарт.</p>
+            <h2>Эрүүл, баталгаат орц</h2>
+            <p>Хамгийн чанартайг танд.</p>
           </div>
         </Col>
         <Col sm={12} md={4} lg={4} className="info-col d-flex">
           <img src={fast} alt="" />
           <div className="text ms-3">
-            <h2>Шуурхай хүргэлт</h2>
-            <p>30 минутанд таны гарт.</p>
+            <h2>Өргөн сонголт</h2>
+            <p>Хамгийн онцгойг танд.</p>
           </div>
         </Col>
       </Row>

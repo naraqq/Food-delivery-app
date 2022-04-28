@@ -4,6 +4,7 @@
   border: none;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   position: relative;
+  height: 100%;
 }
 .card-container:hover .card-container-basket {
   display: flex;
@@ -77,6 +78,7 @@
 .menu-container {
   width: 90%;
   margin: auto;
+  margin-bottom: 50px;
 }
 .menu-filter-btn-container {
   white-space: nowrap;
@@ -140,7 +142,7 @@
     margin: -15px;
   }
   .card-container-basket p {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 600;
   }
   .card-img-container img {
@@ -148,16 +150,16 @@
     border-radius: 7px;
   }
   .card-title {
-    font-size: 16px;
+    font-size: 14px;
   }
   .card-text p {
     margin-bottom: 0px;
   }
   .card-text-price {
-    font-size: 18px;
+    font-size: 12px;
   }
   .card-text-price-discount {
-    font-size: 18px;
+    font-size: 13px;
   }
   .card-price-discount-top-right {
     font-size: 18px;

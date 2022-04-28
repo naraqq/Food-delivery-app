@@ -5,6 +5,8 @@ import Card from "./Card";
 import { Row } from "react-bootstrap";
 import { useFood } from "../contexts/FoodContext";
 import { otherServices } from "../services/otherServices";
+import Footer from "./Footer";
+
 export default function Main() {
   const [cats, setCats] = useState([]);
   const [foods, setFoods] = useFood();
@@ -137,6 +139,7 @@ export default function Main() {
 
         {cats.map((cat) => filterFoods(cat))}
       </div>
+      <Footer />
     </div>
   );
 }

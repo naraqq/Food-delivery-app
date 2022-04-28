@@ -14,6 +14,11 @@ nav {
   background-color: white;
   z-index: 1000000;
 }
+
+.img-div-order {
+  width: 100%;
+  /* height: 135.35px; */
+}
 .terms-and-condition {
   width: 100%;
   height: 100%;
@@ -21,7 +26,7 @@ nav {
 }
 .order-img-main {
   width: 100%;
-  height: 100px;
+  height: calc(100% - 10px);
   transform: scale(1.1);
 }
 .terms-and-condition h5 {
@@ -50,6 +55,15 @@ nav {
   display: flex;
   justify-content: center;
 }
+.modal-img {
+  width: 100%;
+  height: 30%;
+}
+.order-img-side {
+  width: 100%;
+  height: 20vh;
+}
+
 .basket-container {
   width: 100%;
   height: 100vh;
@@ -60,9 +74,22 @@ nav {
   height: 60%;
   overflow: scroll;
 }
+#my-modal {
+  position: absolute;
+  top: 8%;
+  left: 8%;
+  width: 100% !important;
+}
+.modal-content {
+  border: none !important;
+  border-radius: 0 !important;
+  width: 700px !important;
+  padding: 20px;
+}
+
 .order-box {
-  width: 100%;
-  height: 120px;
+  width: 700px;
+  height: 750px;
   padding: 10px;
   display: flex;
   justify-content: space-between;
@@ -195,12 +222,19 @@ nav {
   height: 35px;
 }
 .exit_button_container button:nth-child(1) {
-  background-color: #fbc5a6;
+  background-color: #f17228;
   width: 50%;
   height: 100%;
   color: white;
   font-size: 13px;
   font-weight: 600;
+  border-right: 1px solid #f5d7c5;
+}
+.exit_button_container button:nth-child(1):hover {
+  background-color: #fbc5a6;
+}
+.exit_button_container button:nth-child(2):hover {
+  background-color: #fbc5a6;
 }
 .exit_button_container button:nth-child(2) {
   background-color: #f17228;
@@ -537,7 +571,7 @@ button {
 
 .SearchForm {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   padding: 20px;
 }
 
@@ -601,6 +635,7 @@ button {
   font-weight: 300;
   margin-bottom: 0;
 }
+
 /* TABLET VERSION CSS */
 
 @media only screen and (max-width: 768px) {
@@ -718,6 +753,9 @@ button {
   .userprofile-container {
     width: 50%;
     margin-top: 100px;
+  }
+  #see-all {
+    text-decoration: none !important;
   }
   .log-in {
     display: none;

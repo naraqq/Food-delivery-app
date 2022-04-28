@@ -14,9 +14,11 @@ function Header(props) {
   const headSearchBar = () => {
     setHeaderSearch(!headerSearch);
   };
+
   const searchBarAppear = () => {
     setHeaderSearch(!headerSearch);
   };
+
   const handleSubmit = (e) => {
     navigate({
       pathname: "/search",
@@ -31,6 +33,7 @@ function Header(props) {
     }
     e.currentTarget.reset();
   };
+
   const handleSubmitWeb = (e) => {
     if (localStorage.getItem("data") === !null) {
       navigate({
@@ -38,12 +41,12 @@ function Header(props) {
         search: e.target[1].value,
       });
     }
-
     props.searchVal(e.target[1].value);
     e.preventDefault();
     setUserValue(e.target.value);
     e.currentTarget.reset();
   };
+
   const [userValue, setUserValue] = useState(() => {
     const saved = localStorage.getItem("userValue2");
     const initialValue = JSON.parse(saved);
@@ -56,6 +59,7 @@ function Header(props) {
     navigate({
       pathname: "/",
     });
+    window.location.reload(true);
   };
 
   const navToLogin = () => {
@@ -71,14 +75,17 @@ function Header(props) {
   const dropDownDisappear = () => {
     setToggling(!Toggling);
   };
+
   const userName = localStorage.getItem("data");
 
   const toggleDropdown = () => {
     setToggleToDropDown(!toggleToDropdown);
   };
+
   const checkExit = () => {
     setExit(!exit);
   };
+
   const navToBasket = () => {
     navigate({
       pathname: "/basket",
@@ -149,7 +156,9 @@ function Header(props) {
                     alt=""
                   />
                 </div>
-                <NavLink onClick={dropDownDisappear} to="/basket">Миний захиалга</NavLink>
+                <NavLink onClick={dropDownDisappear} to="/basket">
+                  Миний захиалга
+                </NavLink>
               </div>
               <img src="mobile-version-icons/see more.svg" alt="" />
             </div>
@@ -358,8 +367,9 @@ function Header(props) {
                   <span className="sign_in">Нэвтрэх</span>
                 </button>
               )}
+
               <div
-              onClick={toggleDropdown}
+                onClick={toggleDropdown}
                 className={
                   toggleToDropdown ? "user_dropdown" : "user_dropdown_dis"
                 }
@@ -370,9 +380,15 @@ function Header(props) {
                 >
                   Хэрэглэгчийн мэдээлэл
                 </NavLink>
-                <NavLink onClick={() => setToggleToDropDown(!toggleToDropdown)} to="/basket">Миний захиалгууд</NavLink>
+                <NavLink
+                  onClick={() => setToggleToDropDown(!toggleToDropdown)}
+                  to="/basket"
+                >
+                  Миний захиалгууд
+                </NavLink>
                 <button onClick={checkExit}>Гарах</button>
               </div>
+
               <div
                 style={{ backgroundColor: "rgba(0, 0, 0, 0.4)" }}
                 className={
