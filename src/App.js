@@ -25,7 +25,7 @@ function App() {
         <Header searchVal={setSearchParam} />
         <Routes>
           <Route path="/" element={<Main />}></Route>
-          <Route path="/menu" element={<Menu />}></Route>
+          <Route path="/menu/*" element={<Menu />}></Route>
           <Route path="/*" element={<NotFound />}></Route>
           <Route path="/register" element={<RegisterForm />}></Route>
           <Route path="/login" element={<Login />}></Route>

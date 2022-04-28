@@ -18,14 +18,14 @@ function Basket() {
       .then((data) => data.json())
       .then((data) => setData(data.data));
   }, []);
-  let amount = 0
-  let filteredData = data.filter(e => e.name.includes(orderedItem))
-  const totalPrice = filteredData.map((e) => e.price);
-  for(let i = 0; i < filteredData.length; i++) {
-    amount += parseInt(totalPrice[i])
-  }
-  let total = amount * count
 
+  let amount = 0;
+  let filteredData = data.filter((e) => e.name.includes(orderedItem));
+  const totalPrice = filteredData.map((e) => e.price);
+  for (let i = 0; i < filteredData.length; i++) {
+    amount += parseInt(totalPrice[i]);
+  }
+  let total = amount * count;
   return (
     <div className="basket-container">
       <h6>МИНИЙ САГС</h6>

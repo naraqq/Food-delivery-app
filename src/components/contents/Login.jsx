@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { userServices } from "../../services/userService";
+import { Modal, Button } from "react-bootstrap";
 
 function Login() {
   const navigate = useNavigate();
@@ -24,7 +25,6 @@ function Login() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
     userServices
       .loginUser({
         email: e.target[0].value,
@@ -36,10 +36,19 @@ function Login() {
       navigate({
         pathname: "/",
       });
-    } else {
-      alert("Хэрэглэгчийн email эсвэл нууц үг буруу байна!");
     }
+    setShow(true);
   };
+
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => {
+    navigate({
+      pathname: "/",
+    });
+    setShow(false);
+  };
+  // const handleShow = () => setShow(true);
 
   return (
     <div className="ProfileContainer">
@@ -93,6 +102,15 @@ function Login() {
           БҮРТГҮҮЛЭХ
         </button>
       </div>
+      <Modal
+        onSubmit={handleClose}
+        id="my-modal"
+        show={show}
+        onHide={handleClose}
+      >
+        <p>Amjilttai newterlee</p>
+        <button onClick={handleClose}>x</button>
+      </Modal>
     </div>
   );
 }
