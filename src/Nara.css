@@ -88,8 +88,6 @@ nav {
 }
 
 .order-box {
-  width: 700px;
-  height: 750px;
   padding: 10px;
   display: flex;
   justify-content: space-between;
@@ -732,6 +730,9 @@ button {
   font-size: 14px;
   color: black;
 }
+/* .carousel-slide {
+  height: 300px;
+} */
 
 .mobile-menu-icon {
   background: rgba(242, 153, 74, 0.1);
