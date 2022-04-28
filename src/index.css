@@ -314,6 +314,9 @@
   .sale-meals h4 {
     font-size: 16px;
   }
+  .sale-meals h4:hover {
+    cursor: default;
+  }
   .slider {
     box-shadow: 0px 0px 30px 30px #f1722813;
   }
@@ -363,6 +366,12 @@
   .info-col .text h2 {
     font-weight: 700;
     font-size: 13px;
+  }
+  .info-col .text h2:hover {
+    cursor: default;
+  }
+  .info-col .text p:hover {
+    cursor: default;
   }
   .info-col .text p {
     font-weight: 400;
@@ -486,17 +495,17 @@
 
   .carousel-text .header-text {
     font-size: 55px;
-    /* color: #F17228; */
     width: 400px;
     display: flex;
     justify-content: flex-end;
     font-weight: 700;
-
     color: #f17228;
-    /* text-shadow: 2px 2px 20px rgba(117, 114, 114, 0.705); */
     -webkit-background-clip: text;
     -moz-background-clip: text;
     background-clip: text;
+  }
+  .carousel-text .header-text:hover {
+    cursor: default;
   }
   .carousel-text {
     width: 400px;
@@ -512,6 +521,9 @@
     color: #4d2000;
     font-size: 22px;
     justify-content: flex-end;
+  }
+  .carousel-text .header-p:hover {
+    cursor: default;
   }
   .carousel-slide {
     width: 100vw;

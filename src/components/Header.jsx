@@ -367,6 +367,7 @@ function Header(props) {
                   <span className="sign_in">Нэвтрэх</span>
                 </button>
               )}
+
               <div
                 onClick={toggleDropdown}
                 className={
@@ -387,6 +388,7 @@ function Header(props) {
                 </NavLink>
                 <button onClick={checkExit}>Гарах</button>
               </div>
+
               <div
                 style={{ backgroundColor: "rgba(0, 0, 0, 0.4)" }}
                 className={

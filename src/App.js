@@ -2,7 +2,6 @@ import "./Nara.css";
 import React, { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
-import Footer from "./components/Footer";
 import Main from "./components/Main";
 import Login from "./components/contents/Login";
 import NotFound from "./components/contents/sub-contents/NotFound";
@@ -41,7 +40,6 @@ function App() {
           ></Route>
         </Routes>
       </BrowserRouter>
-      <Footer />
     </div>
   );
 }

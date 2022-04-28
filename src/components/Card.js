@@ -21,7 +21,7 @@ export default function Card(props) {
   return (
     <>
       <Col md={3} xs={6}>
-        <div className="card-container" onClick={handleCard}>
+        <div className="card-container" onClick={handleShow}>
           <div className="card-container-basket">
             <img src="images/basket_icon.png" />
             <p>Сагслах</p>
