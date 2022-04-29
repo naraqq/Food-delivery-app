@@ -21,7 +21,10 @@ export default function Card(props) {
   return (
     <>
       <Col md={3} xs={6}>
-        <div className="card-container" onClick={windowWidth < 400 ? handleCard : handleShow}>
+        <div
+          className="card-container"
+          onClick={windowWidth < 400 ? handleCard : handleShow}
+        >
           <div className="card-container-basket">
             <img src="images/basket_icon.png" />
             <p>Сагслах</p>
@@ -76,27 +79,28 @@ export default function Card(props) {
               alt=""
             />
           </div>
+          <div className="modal-items">
+            <p>{props.name}</p>
+            <span>{props.price}₮</span>
 
-          <p>{props.name}</p>
-          <span>{props.price}₮</span>
-
-          <button
-            onClick={() => {
-              setCount(count - 1);
-            }}
-            className="order-button-min"
-          >
-            -
-          </button>
-          <p className="order-span-div-min">{count}</p>
-          <button
-            onClick={() => {
-              setCount(count + 1);
-            }}
-            className="order-button-min"
-          >
-            +
-          </button>
+            <button
+              onClick={() => {
+                setCount(count - 1);
+              }}
+              className="order-button-min"
+            >
+              -
+            </button>
+            <p className="order-span-div-min">{count}</p>
+            <button
+              onClick={() => {
+                setCount(count + 1);
+              }}
+              className="order-button-min"
+            >
+              +
+            </button>
+          </div>
         </div>
         <Modal.Footer>
           <button onClick={handleClose}>x</button>

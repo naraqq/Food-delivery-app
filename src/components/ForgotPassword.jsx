@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import { Row, Col, Toast, toggleShowA, Button, showA } from "react-bootstrap";
-
-import { useForm } from "react-hook-form";
 import Footer from "./Footer";
-import succesimg from '../Images/success.png'
+import { useForm } from "react-hook-form";
+import succesimg from "../Images/success.png";
 
 export default function ForgotPassword() {
   const [showA, setShowA] = useState(false);
@@ -147,29 +146,30 @@ export default function ForgotPassword() {
   }
 
   return (
-    <div className="container-forgot-section">
-      {returnValue}
+    <>
+      <div className="container-forgot-section">
+        {returnValue}
 
-      <Toast
-        show={showA}
-        className="fp-toast"
-        onClose={onSubmit}
-        delay={2000}
-        autohide
-      >
-        <div className="toast-img">
+        <Toast
+          show={showA}
+          className="fp-toast"
+          onClose={onSubmit}
+          delay={2000}
+          autohide
+        >
+          <div className="toast-img">
+            <img src={succesimg} alt="" />
+          </div>
+          <div className="fp-text">
+            {isTrue ? "Нууц үг амжилттай хадгалагдлаа." : "error"}
+          </div>
+        </Toast>
 
-        <img src={succesimg} alt="" />
+        <div className="fp-footer">
+          <Footer />
         </div>
-        <div className="fp-text">
-
-        {isTrue ? "Нууц үг амжилттай хадгалагдлаа." : "error"}
-        </div>
-      </Toast>
-
-      <div className="fp-footer">
-        <Footer />
       </div>
-    </div>
+      <Footer />
+    </>
   );
 }

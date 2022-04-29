@@ -15,7 +15,7 @@ function Header(props) {
     setHeaderSearch(!headerSearch);
   };
 
-  const searchBarAppear = () => {
+  const searchBarClear = () => {
     setHeaderSearch(!headerSearch);
   };
 
@@ -35,12 +35,10 @@ function Header(props) {
   };
 
   const handleSubmitWeb = (e) => {
-    if (localStorage.getItem("data") === !null) {
-      navigate({
-        pathname: "/search",
-        search: e.target[1].value,
-      });
-    }
+    navigate({
+      pathname: "/search",
+      search: e.target[1].value,
+    });
     props.searchVal(e.target[1].value);
     e.preventDefault();
     setUserValue(e.target.value);
@@ -177,7 +175,7 @@ function Header(props) {
           <div className="switchBarContainer">
             <form
               onSubmit={handleSubmit}
-              onBlur={searchBarAppear}
+              onBlur={searchBarClear}
               className="min-input"
               action=""
             >
@@ -198,7 +196,6 @@ function Header(props) {
               </button>
               <input
                 onChange={(e) => setUserValue(e.target.value)}
-                onSubmit={searchBarAppear}
                 placeholder="Хайх"
                 type="text"
                 autoFocus
@@ -294,7 +291,6 @@ function Header(props) {
               </button>
               <input
                 onChange={(e) => setUserValue(e.target.value)}
-                onSubmit={searchBarAppear}
                 placeholder="Хайх"
                 type="text"
               />

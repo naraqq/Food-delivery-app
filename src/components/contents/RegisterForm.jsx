@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate, NavLink } from "react-router-dom";
 import { userServices } from "../../services/userService";
+import Footer from "../Footer";
 
 function RegisterForm() {
   const [trigger, setTrigger] = useState(false);
@@ -46,91 +47,98 @@ function RegisterForm() {
   };
 
   return (
-    <div className="registerForm">
-      <div className="registerForm-container">
-        <span className="headerSpan">Бүртгүүлэх</span>
-        <form action="" onSubmit={handleSubmit}>
-          <span>Нэр</span>
-          <input
-            className="form-input"
-            type="text"
-            placeholder="Нэрээ оруулна уу. "
-          />
-          <span>И-мэйл</span>
-          <input
-            className="form-input"
-            type="email"
-            placeholder="И-мэйл хаягаа оруулна уу. "
-          />
-          <span>Хаяг</span>
-          <input
-            className="form-input"
-            type="text"
-            placeholder="Хаягаа оруулна уу. "
-          />
-          <div className="form-icon-container">
-            <span>Нууц үг</span>
+    <>
+      <div className="registerForm">
+        <div className="registerForm-container">
+          <span className="headerSpan">Бүртгүүлэх</span>
+          <form action="" onSubmit={handleSubmit}>
+            <span>Нэр</span>
             <input
               className="form-input"
-              type={passwordShow ? "text" : "password"}
-              placeholder="Нууц үгээ оруулна уу. "
+              type="text"
+              placeholder="Нэрээ оруулна уу. "
             />
-            <button
-              className="icon-button-position"
-              type="button"
-              onClick={iconToggle}
-            >
-              {passwordIconShow === false ? (
-                <img className="img-icon-style" src="eye_active.svg" alt="" />
-              ) : (
-                <img className="img-icon-style" src="eye slash.svg" alt="" />
-              )}
-            </button>
-          </div>
-          <div className="form-icon-container">
-            <span>Нууц үг давтах</span>
+            <span>И-мэйл</span>
             <input
               className="form-input"
-              type={passwordHide ? "text" : "password"}
-              placeholder="Нууц үгээ давтана уу. "
+              type="email"
+              placeholder="И-мэйл хаягаа оруулна уу. "
             />
-            <button
-              className="icon-button-position"
-              type="button"
-              onClick={iconToggle2}
-            >
-              {passwordIconHide === false ? (
-                <img className="img-icon-style" src="eye_active.svg" alt="" />
-              ) : (
-                <img className="img-icon-style" src="eye slash.svg" alt="" />
-              )}
-            </button>
-          </div>
-          <div className="form-anchor">
-            <button id="btn-check" onClick={changeCheckboxClass} type="button">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="25"
-                height="25"
-                fill="currentColor"
-                className={
-                  trigger === true
-                    ? "button-check-passwordShow"
-                    : "button-check"
-                }
-                viewBox="0 0 16 16"
+            <span>Хаяг</span>
+            <input
+              className="form-input"
+              type="text"
+              placeholder="Хаягаа оруулна уу. "
+            />
+            <div className="form-icon-container">
+              <span>Нууц үг</span>
+              <input
+                className="form-input"
+                type={passwordShow ? "text" : "password"}
+                placeholder="Нууц үгээ оруулна уу. "
+              />
+              <button
+                className="icon-button-position"
+                type="button"
+                onClick={iconToggle}
               >
-                <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
-              </svg>
+                {passwordIconShow === false ? (
+                  <img className="img-icon-style" src="eye_active.svg" alt="" />
+                ) : (
+                  <img className="img-icon-style" src="eye slash.svg" alt="" />
+                )}
+              </button>
+            </div>
+            <div className="form-icon-container">
+              <span>Нууц үг давтах</span>
+              <input
+                className="form-input"
+                type={passwordHide ? "text" : "password"}
+                placeholder="Нууц үгээ давтана уу. "
+              />
+              <button
+                className="icon-button-position"
+                type="button"
+                onClick={iconToggle2}
+              >
+                {passwordIconHide === false ? (
+                  <img className="img-icon-style" src="eye_active.svg" alt="" />
+                ) : (
+                  <img className="img-icon-style" src="eye slash.svg" alt="" />
+                )}
+              </button>
+            </div>
+            <div className="form-anchor">
+              <button
+                id="btn-check"
+                onClick={changeCheckboxClass}
+                type="button"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="25"
+                  height="25"
+                  fill="currentColor"
+                  className={
+                    trigger === true
+                      ? "button-check-passwordShow"
+                      : "button-check"
+                  }
+                  viewBox="0 0 16 16"
+                >
+                  <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
+                </svg>
+              </button>
+              <NavLink to="/terms">Үйлчилгээний нөхцөл зөвшөөрөх</NavLink>
+            </div>
+            <button type="submit" className="form-main-btn">
+              Бүртгүүлэх
             </button>
-            <NavLink to="/terms">Үйлчилгээний нөхцөл зөвшөөрөх</NavLink>
-          </div>
-          <button type="submit" className="form-main-btn">
-            Бүртгүүлэх
-          </button>
-        </form>
+          </form>
+        </div>
       </div>
-    </div>
+      <Footer />
+    </>
   );
 }
 

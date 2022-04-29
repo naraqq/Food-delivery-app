@@ -193,6 +193,7 @@
 }
 .container-forgot-section {
   position: relative;
+  margin-bottom: 120px;
 }
 .container-forgot-section .toast {
   width: 340px;
