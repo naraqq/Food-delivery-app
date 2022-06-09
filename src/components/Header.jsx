@@ -1,8 +1,15 @@
 import React, { useEffect, useState } from "react";
-import { Nav } from "react-bootstrap";
 import { useNavigate, NavLink } from "react-router-dom";
 
 function Header(props) {
+  const [name, setName] = useState("");
+  useEffect(() => {
+    const user = JSON.parse(localStorage.getItem("user"));
+    console.log(user);
+    if (user) {
+      setName(user.name);
+    }
+  }, [name]);
   const navigate = useNavigate();
 
   const [Toggling, setToggling] = useState(false);
@@ -73,8 +80,6 @@ function Header(props) {
   const dropDownDisappear = () => {
     setToggling(!Toggling);
   };
-
-  const userName = localStorage.getItem("data");
 
   const toggleDropdown = () => {
     setToggleToDropDown(!toggleToDropdown);
@@ -328,7 +333,7 @@ function Header(props) {
                 </svg>
                 <span className="bucket">Сагс</span>
               </button>
-              {localStorage.getItem("data") ? (
+              {name ? (
                 <button onClick={toggleDropdown}>
                   <svg
                     className="sign_in_icon"
@@ -343,7 +348,7 @@ function Header(props) {
                       fill="#F17228"
                     />
                   </svg>
-                  <span className="sign_in_user">{userName}</span>
+                  <span className="sign_in_user">{name}</span>
                 </button>
               ) : (
                 <button onClick={navToLogin}>

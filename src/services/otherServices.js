@@ -8,7 +8,7 @@ const getAllFood = async () => {
   });
 };
 const getCat = async () => {
-  return await fetch("https://dev-api.mstars.mn/api/cats", {
+  return await fetch("https://dev-api.mstars.mn/api/categories", {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
@@ -18,7 +18,7 @@ const getCat = async () => {
 };
 export const otherServices = {
   getAllFood,
-  getCat
+  getCat,
 };
 
 /*

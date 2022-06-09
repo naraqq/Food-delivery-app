@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { userServices } from "../../services/userService";
-import { Modal, Button } from "react-bootstrap";
 import Footer from "../Footer";
 
 function Login() {
@@ -24,7 +23,7 @@ function Login() {
     });
   };
 
-  const handleSubmit = (e) => {
+  function handleSubmit(e) {
     e.preventDefault();
     userServices
       .loginUser({
@@ -32,21 +31,21 @@ function Login() {
         password: e.target[1].value,
       })
       .then((res) => res.json())
-      .then((data) => localStorage.setItem("data", data.data.name));
-    if (localStorage.getItem("data")) {
+      .then((data) => {
+        localStorage.setItem("user", JSON.stringify(data.data));
+        localStorage.setItem("token", JSON.stringify(data.token));
+      });
+    redirect();
+  }
+  function redirect() {
+    if (localStorage.getItem("user")) {
       navigate({
         pathname: "/",
       });
       alert("Та амжилттай нэвтэрлээ !");
+      window.location.reload(true);
     }
-  };
-
-  const handleClose = () => {
-    navigate({
-      pathname: "/",
-    });
-  };
-  // const handleShow = () => setShow(true);
+  }
 
   return (
     <>
@@ -55,7 +54,11 @@ function Login() {
           <h3>нэвтрэх</h3>
           <form action="" onSubmit={handleSubmit}>
             <h4>И-мэйл</h4>
-            <input type="email" placeholder="И-мэйл хаягаа оруулна уу. " />
+            <input
+              type="email"
+              placeholder="И-мэйл хаягаа оруулна уу. "
+              autoFocus
+            />
             <h4>Нууц үг</h4>
             <div className="input-div">
               <input

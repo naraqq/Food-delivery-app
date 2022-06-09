@@ -27,23 +27,25 @@ function RegisterForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (e.target[3].value === e.target[5].value) {
-      if (trigger) {
-        navigate({
-          pathname: "/login",
-        });
-        userServices.signUpUser({
-          email: e.target[1].value,
-          password: e.target[5].value,
-          name: e.target[0].value,
-          address: e.target[2].value,
-        });
-      } else {
-        alert("Бүртгүүлхийн тулд үйлчилгээний нөхцлийг зөвшөөрнө үү.");
-      }
-    } else {
-      alert("Нууц үг зөрүүтэй тул бүртгэх боломжгүй байна.");
-    }
+    // if (e.target[3].value === e.target[5].value) {
+    //   if (trigger) {
+    //     navigate({
+    //       pathname: "/login",
+    //     });
+    userServices
+      .signUpUser({
+        email: e.target[1].value,
+        password: e.target[5].value,
+        name: e.target[0].value,
+        address: e.target[2].value,
+      })
+      .then((data) => console.log(data));
+    //   } else {
+    //     alert("Бүртгүүлхийн тулд үйлчилгээний нөхцлийг зөвшөөрнө үү.");
+    //   }
+    // } else {
+    //   alert("Нууц үг зөрүүтэй тул бүртгэх боломжгүй байна.");
+    // }
   };
 
   return (

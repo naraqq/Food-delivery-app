@@ -1,5 +1,5 @@
 const loginUser = async (credentials) => {
-  return await fetch("https://dev-api.mstars.mn/admin/login", {
+  return await fetch("http://localhost:5000/api/user/login", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -11,7 +11,7 @@ const loginUser = async (credentials) => {
   });
 };
 const signUpUser = async (credentials) => {
-  return await fetch("https://dev-api.mstars.mn/admin/register", {
+  return await fetch("http://localhost:5000/api/user/register", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -25,7 +25,7 @@ const signUpUser = async (credentials) => {
   });
 };
 const userInfo = async (credentials) => {
-  return await fetch("https://dev-api.mstars.mn/admin/register", {
+  return await fetch("http://localhost:5000/api/user/login", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -39,5 +39,5 @@ const userInfo = async (credentials) => {
 export const userServices = {
   signUpUser,
   loginUser,
-  userInfo
+  userInfo,
 };
