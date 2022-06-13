@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate, NavLink } from "react-router-dom";
 import { userServices } from "../../services/userService";
 import Footer from "../Footer";
+import { toast } from "react-toastify";
 
 function RegisterForm() {
   const [trigger, setTrigger] = useState(false);
@@ -41,10 +42,26 @@ function RegisterForm() {
           })
           .then((data) => console.log(data));
       } else {
-        alert("Бүртгүүлхийн тулд үйлчилгээний нөхцлийг зөвшөөрнө үү.");
+        toast.error("Бүртгүүлхийн тулд үйлчилгээний нөхцлийг зөвшөөрнө үү!", {
+          position: "bottom-center",
+          autoClose: 3000,
+          hideProgressBar: true,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
       }
     } else {
-      alert("Нууц үг зөрүүтэй тул бүртгэх боломжгүй байна.");
+      toast.error("Нууц үг зөрүүтэй тул бүртгэх боломжгүй байна.!", {
+        position: "bottom-center",
+        autoClose: 3000,
+        hideProgressBar: true,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
     }
   };
 

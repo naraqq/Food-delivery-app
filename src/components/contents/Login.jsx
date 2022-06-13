@@ -33,27 +33,26 @@ function Login() {
       })
       .then((res) => res.json())
       .then((data) => {
-        localStorage.setItem("user", JSON.stringify(data.data));
-        localStorage.setItem("token", JSON.stringify(data.token));
+        if (data.success === true) {
+          localStorage.setItem("user", JSON.stringify(data.data));
+          localStorage.setItem("token", JSON.stringify(data.token));
+          redirect();
+        } else {
+          toast.error("Нууц үг эсвэл email хаяг буруу байна!", {
+            position: toast.POSITION.BOTTOM_CENTER,
+            autoClose: 3000,
+            hideProgressBar: true,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+          });
+        }
       });
-    redirect();
-    toast.success("Амжилттай нэвтэрлээ!", {
-      position: "bottom-center",
-      autoClose: 2000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-    });
   }
   function redirect() {
-    if (localStorage.getItem("user")) {
-      navigate({
-        pathname: "/",
-      });
-      window.location.reload(true);
-    }
+    navigate("/", { state: "ok" });
+    window.location.reload(true);
   }
 
   return (

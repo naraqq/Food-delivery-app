@@ -6,10 +6,13 @@ import { Row } from "react-bootstrap";
 import { useFood } from "../contexts/FoodContext";
 import { otherServices } from "../services/otherServices";
 import Footer from "./Footer";
+import { toast } from "react-toastify";
+import { useLocation } from "react-router-dom";
 
 export default function Main() {
   const [cats, setCats] = useState([]);
   const [foods, setFoods] = useFood();
+  const location = useLocation();
 
   useEffect(() => {
     otherServices
@@ -19,6 +22,17 @@ export default function Main() {
     window.onbeforeunload = function () {
       window.scrollTo(0, 0);
     };
+    if (location.state == "ok") {
+      toast.success("Та амжилттай нэвтэрлээ!", {
+        position: "bottom-center",
+        autoClose: 3000,
+        hideProgressBar: true,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
+    }
   }, []);
 
   function filterFoods(category_name) {
