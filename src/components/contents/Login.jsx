@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { userServices } from "../../services/userService";
+import { toast } from "react-toastify";
 import Footer from "../Footer";
 
 function Login() {
@@ -36,13 +37,21 @@ function Login() {
         localStorage.setItem("token", JSON.stringify(data.token));
       });
     redirect();
+    toast.success("Амжилттай нэвтэрлээ!", {
+      position: "bottom-center",
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
   }
   function redirect() {
     if (localStorage.getItem("user")) {
       navigate({
         pathname: "/",
       });
-      alert("Та амжилттай нэвтэрлээ !");
       window.location.reload(true);
     }
   }

@@ -12,11 +12,14 @@ import "./RegisterFormCSS.css";
 import "./CreateProfile.css";
 import FoodProvider from "./contexts/FoodContext";
 import "./styles/order.css";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 ReactDOM.render(
   <React.StrictMode>
     <FoodProvider>
       <App />
+      <ToastContainer />
     </FoodProvider>
   </React.StrictMode>,
   document.getElementById("root")

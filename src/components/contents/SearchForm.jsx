@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { otherServices } from "../../services/otherServices";
 import { Row } from "react-bootstrap";
 import Card from "../Card";
-import Footer from "../Footer";
 
 function SearchForm(props) {
   const [data, setData] = useState([]);

@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import {userServices} from "../../services/userService"
 
 function UserProfile() {
   const [isDisabled, setisDisabled] = useState(true);
