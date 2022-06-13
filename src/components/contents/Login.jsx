@@ -48,6 +48,17 @@ function Login() {
             progress: undefined,
           });
         }
+      })
+      .catch((err) => {
+        toast.error("Server-тэй холбогдход алдаа гарлаа!", {
+          position: "bottom-center",
+          autoClose: 5000,
+          hideProgressBar: true,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
       });
   }
   function redirect() {

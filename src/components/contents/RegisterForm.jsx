@@ -40,7 +40,18 @@ function RegisterForm() {
             name: e.target[0].value,
             address: e.target[2].value,
           })
-          .then((data) => console.log(data));
+          .then((data) => console.log(data))
+          .catch((err) => {
+            toast.error("Server-тэй холбогдход алдаа гарлаа!", {
+              position: "bottom-center",
+              autoClose: 5000,
+              hideProgressBar: true,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+            });
+          });
       } else {
         toast.error("Бүртгүүлхийн тулд үйлчилгээний нөхцлийг зөвшөөрнө үү!", {
           position: "bottom-center",
