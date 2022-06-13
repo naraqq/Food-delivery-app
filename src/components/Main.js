@@ -23,9 +23,9 @@ export default function Main() {
       window.scrollTo(0, 0);
     };
     if (location.state == "ok") {
-      toast.success("Та амжилттай нэвтэрлээ!", {
+      toast.success("Амжилттай нэвтэрлээ!", {
         position: "bottom-center",
-        autoClose: 3000,
+        autoClose: 5000,
         hideProgressBar: true,
         closeOnClick: true,
         pauseOnHover: true,
