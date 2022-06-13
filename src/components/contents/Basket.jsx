@@ -26,6 +26,10 @@ function Basket() {
     amount += parseInt(totalPrice[i]);
   }
   let total = amount * count;
+  const saveOrder = (total, filteredData) => {
+    console.log(filteredData);
+    console.log(total);
+  };
   return (
     <div className="basket-container">
       <h6>МИНИЙ САГС</h6>
@@ -44,7 +48,7 @@ function Basket() {
       <div className="lower-container">
         <p>Нийт: {total}₮</p>
       </div>
-      <button>Захиалах</button>
+      <button onClick={saveOrder}>Захиалах</button>
     </div>
   );
 }

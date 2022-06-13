@@ -5,7 +5,6 @@ function Header(props) {
   const [name, setName] = useState("");
   useEffect(() => {
     const user = JSON.parse(localStorage.getItem("user"));
-    console.log(user);
     if (user) {
       setName(user.name);
     }
