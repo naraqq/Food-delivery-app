@@ -20,11 +20,9 @@ function Order(props) {
     //baih tul default utga deer ehnii hoolig str eer bichij ogow
     location.state === null ? "Чикен рамен" : location.state.name;
   const filteredData = data.filter((e) => e.name.includes(certainItem));
-  console.log(filteredData);
   const quantity = count;
   const product = filteredData;
   const price = filteredData.map((e) => e.price);
-  console.log([...price]);
 
   const navToMealDetail = () => {
     navigate("/basket", { state: { certainItem, count } });

@@ -70,6 +70,7 @@ export default function Menu() {
               price={data.price}
               discount={data.discount}
               img={data.image}
+              ingredients={data.ingredients}
             />
           ))}
         </Row>
