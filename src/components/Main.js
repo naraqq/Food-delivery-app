@@ -73,6 +73,7 @@ export default function Main() {
                     price={data.price}
                     discount={data.discount}
                     img={data.image}
+                    ingredients={data.ingredients}
                   />
                 ))
             : foods
@@ -84,6 +85,7 @@ export default function Main() {
                     price={data.price}
                     discount={data.discount}
                     img={data.image}
+                    ingredients={data.ingredients}
                   />
                 ))}
         </Row>
@@ -124,6 +126,7 @@ export default function Main() {
                     price={data.price}
                     discount={data.discount}
                     img={data.image}
+                    ingredients={data.ingredients}
                   />
                 ))
             : foods
@@ -136,6 +139,7 @@ export default function Main() {
                     price={data.price}
                     discount={data.discount}
                     img={data.image}
+                    ingredients={data.ingredients}
                   />
                 ))}
         </Row>

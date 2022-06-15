@@ -27,8 +27,7 @@ function Basket() {
   }
   let total = amount * count;
   const saveOrder = (total, filteredData) => {
-    console.log(filteredData);
-    console.log(total);
+    // console.log(total);
   };
   return (
     <div className="basket-container">

@@ -30,9 +30,6 @@ function RegisterForm() {
     e.preventDefault();
     if (e.target[3].value === e.target[5].value) {
       if (trigger) {
-        navigate({
-          pathname: "/login",
-        });
         userServices
           .signUpUser({
             email: e.target[1].value,
@@ -40,7 +37,22 @@ function RegisterForm() {
             name: e.target[0].value,
             address: e.target[2].value,
           })
-          .then((data) => console.log(data))
+          .then((data) => {
+            if (data.ok == true) {
+              toast.success("Амжилттай бүртгэгдлээ!", {
+                position: "bottom-center",
+                autoClose: 5000,
+                hideProgressBar: true,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+              });
+              navigate({
+                pathname: "/login",
+              });
+            }
+          })
           .catch((err) => {
             toast.error("Server-тэй холбогдход алдаа гарлаа!", {
               position: "bottom-center",
@@ -87,6 +99,7 @@ function RegisterForm() {
               className="form-input"
               type="text"
               placeholder="Нэрээ оруулна уу. "
+              autoFocus
             />
             <span>И-мэйл</span>
             <input

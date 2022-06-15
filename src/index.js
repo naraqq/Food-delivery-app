@@ -14,6 +14,7 @@ import FoodProvider from "./contexts/FoodContext";
 import "./styles/order.css";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import "./styles/modal.css";
 
 ReactDOM.render(
   <React.StrictMode>

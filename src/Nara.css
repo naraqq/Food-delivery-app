@@ -55,14 +55,7 @@ nav {
   display: flex;
   justify-content: center;
 }
-.modal-img {
-  width: 100%;
-  height: 30%;
-}
-.order-img-side {
-  width: 100%;
-  height: 20vh;
-}
+
 .modal-items {
   margin-top: 30%;
 }
@@ -76,13 +69,6 @@ nav {
   width: 100%;
   height: 60%;
   overflow: scroll;
-}
-#my-modal {
-  position: absolute;
-  top: 8%;
-  left: 8%;
-  width: 100% !important;
-  height: 50% !important;
 }
 .modal-content {
   border: none !important;
