@@ -15,9 +15,20 @@ export default function Card(props) {
   const handleShow = () => setShow(true);
   const [count, setCount] = useState(1);
   const [side, setSide] = useState(false);
+  const quantity = count;
+  const product = props;
+  const price = props.price;
   const handleSide = () => {
     setSide(true);
     setShow(false);
+    localStorage.setItem(
+      "basket",
+      JSON.stringify({
+        product,
+        quantity,
+        price,
+      })
+    );
   };
   const closeSideBar = () => {
     setSide(false);
@@ -153,10 +164,11 @@ export default function Card(props) {
                 price={props.price}
                 discount={props.discount}
                 img={props.img}
+                count={count}
               />
             </div>
-            <div className="lower-container">
-              <p>Нийт: 7800₮</p>
+            <div className="lower-container-b">
+              <p>Нийт: {props.price}₮</p>
             </div>
             <button>Захиалах</button>
           </div>

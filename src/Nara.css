@@ -14,10 +14,18 @@ nav {
   background-color: white;
   z-index: 1000000;
 }
-
+.basket-item-count {
+  position: absolute;
+  font-size: 10px;
+  background-color: #f17228;
+  width: 15px;
+  height: 15px;
+  color: white;
+  border-radius: 50%;
+  margin-left: 15px;
+}
 .img-div-order {
   width: 100%;
-  /* height: 135.35px; */
 }
 .terms-and-condition {
   width: 100%;
@@ -65,9 +73,20 @@ nav {
   height: 85vh;
   padding: 20px;
 }
+.basket-container-b {
+  width: 100%;
+  height: 85vh;
+  padding: 20px;
+  box-shadow: 0 0 5px silver;
+}
 .meal-container {
   width: 100%;
   height: 60%;
+  overflow: scroll;
+}
+.meal-container-b {
+  width: 100%;
+  height: 80%;
   overflow: scroll;
 }
 .modal-content {
@@ -118,6 +137,16 @@ nav {
   margin-top: 20px;
   font-weight: 700;
 }
+.basket-container-b button {
+  width: 100%;
+  height: 40px;
+  background-color: #f17228;
+  color: white;
+  border-radius: 10px;
+  font-size: 14px;
+  margin-top: 20px;
+  font-weight: 700;
+}
 .controllers .order-button-min {
   width: 30px;
   height: 30px;
@@ -135,7 +164,17 @@ nav {
   display: flex;
   justify-content: end;
 }
+.lower-container-b {
+  display: flex;
+  justify-content: end;
+}
 .lower-container p {
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.lower-container-b p {
   font-size: 14px;
   font-weight: 600;
   margin-top: 10px;
@@ -143,6 +182,13 @@ nav {
 }
 
 .basket-container h6 {
+  color: #f17228;
+  font-size: 13px;
+  font-weight: 600;
+  border-left: 5px solid #f17228;
+  padding-left: 5px;
+}
+.basket-container-b h6 {
   color: #f17228;
   font-size: 13px;
   font-weight: 600;
@@ -646,6 +692,7 @@ button {
   }
   .md-button {
     display: none;
+    position: relative;
   }
   .main-links {
     display: none;
@@ -742,6 +789,9 @@ button {
 /* LOG IN CSS */
 
 @media only screen and (min-width: 768px) {
+  .basket-container-b {
+    width: 50%;
+  }
   .userprofile-container {
     width: 50%;
     margin-top: 100px;

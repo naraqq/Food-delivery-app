@@ -147,6 +147,12 @@
   border: 1px solid #f7f8f7;
   border-radius: 5px;
 }
+.main-basket {
+  display: flex;
+  justify-content: flex-end;
+  padding: 30px;
+}
+
 @keyframes side {
   from {
     right: -500px;

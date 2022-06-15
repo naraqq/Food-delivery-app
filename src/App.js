@@ -12,8 +12,8 @@ import Menu from "./components/Menu";
 import SearchForm from "./components/contents/SearchForm";
 import UserProfile from "./components/contents/UserProfile";
 import Order from "./components/contents/Order";
-import Basket from "./components/contents/Basket";
 import Terms from "./components/contents/sub-contents/TermsAndCondition";
+import MainBasket from "./components/contents/MainBasket";
 
 function App() {
   const [searchParam, setSearchParam] = useState("");
@@ -33,7 +33,7 @@ function App() {
           <Route path="/userprofile" element={<UserProfile />}></Route>
           <Route path="/order" element={<Order />}></Route>
           <Route path="/terms" element={<Terms />}></Route>
-          <Route path="/basket" element={<Basket />}></Route>
+          <Route path="/basket" element={<MainBasket />}></Route>
           <Route
             path="/search/*"
             element={<SearchForm searchVal={searchParam} />}

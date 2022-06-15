@@ -32,6 +32,7 @@ function Basket() {
   return (
     <div className="basket-container">
       <h6>МИНИЙ САГС</h6>
+      <button>x</button>
       <div className="meal-container">
         {filteredData.map((data) => (
           <BasketItem

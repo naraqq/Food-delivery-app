@@ -1,9 +1,9 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../styles/javka.css";
-import { Container, Row, Col, Nav } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import "leaflet/dist/leaflet.css";
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import { MapContainer, TileLayer, Marker } from "react-leaflet";
 import teslaStation from "../data/stations.json";
 import Footer from "./Footer";
 

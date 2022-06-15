@@ -93,6 +93,8 @@ function Header(props) {
       pathname: "/basket",
     });
   };
+  const raw = localStorage.getItem("basket");
+  const notify = JSON.parse(raw);
 
   return (
     <div>
@@ -317,6 +319,9 @@ function Header(props) {
                 </svg>
               </button>
               <button onClick={navToBasket} className="md-button">
+                {notify !== null ? (
+                  <div className="basket-item-count">1</div>
+                ) : null}
                 <svg
                   className="bucket_icon"
                   width="23"
@@ -374,12 +379,7 @@ function Header(props) {
                   toggleToDropdown ? "user_dropdown" : "user_dropdown_dis"
                 }
               >
-                <NavLink
-                  // onClick={() => setToggleToDropDown(!toggleToDropdown)}
-                  to="/userprofile"
-                >
-                  Хэрэглэгчийн мэдээлэл
-                </NavLink>
+                <NavLink to="/userprofile">Хэрэглэгчийн мэдээлэл</NavLink>
                 <NavLink
                   onClick={() => setToggleToDropDown(!toggleToDropdown)}
                   to="/basket"
