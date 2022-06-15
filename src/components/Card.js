@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Col } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
+import BasketItem from "./contents/sub-contents/BasketItem";
 
 export default function Card(props) {
   const navigate = useNavigate();
@@ -13,6 +14,14 @@ export default function Card(props) {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   const [count, setCount] = useState(1);
+  const [side, setSide] = useState(false);
+  const handleSide = () => {
+    setSide(true);
+    setShow(false);
+  };
+  const closeSideBar = () => {
+    setSide(false);
+  };
   return (
     <>
       <Col md={3} xs={6}>
@@ -113,7 +122,12 @@ export default function Card(props) {
                   </div>
                 </div>
                 <div className="modal-right-bottom-b">
-                  <button className="modal-right-bottom-b-btn">Сагслах</button>
+                  <button
+                    onClick={handleSide}
+                    className="modal-right-bottom-b-btn"
+                  >
+                    Сагслах
+                  </button>
                 </div>
               </div>
             </div>
@@ -122,6 +136,29 @@ export default function Card(props) {
                 x
               </button>
             </div>
+          </div>
+        </div>
+      ) : null}
+      {side == true ? (
+        <div className="side-bar">
+          <button className="x-button-order" onClick={closeSideBar}>
+            x
+          </button>
+          <div className="basket-container">
+            <h6>МИНИЙ САГС</h6>
+            <div className="meal-container">
+              <BasketItem
+                name={props.name}
+                key={props._id}
+                price={props.price}
+                discount={props.discount}
+                img={props.img}
+              />
+            </div>
+            <div className="lower-container">
+              <p>Нийт: 7800₮</p>
+            </div>
+            <button>Захиалах</button>
           </div>
         </div>
       ) : null}
