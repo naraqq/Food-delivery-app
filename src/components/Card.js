@@ -113,12 +113,7 @@ export default function Card(props) {
                   </div>
                 </div>
                 <div className="modal-right-bottom-b">
-                  <button
-                    onClick={handleClose}
-                    className="modal-right-bottom-b-btn"
-                  >
-                    Сагслах
-                  </button>
+                  <button className="modal-right-bottom-b-btn">Сагслах</button>
                 </div>
               </div>
             </div>
